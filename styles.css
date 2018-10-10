@@ -1,0 +1,40 @@
+.welcome-page {
+
+}
+
+.player-scores-container {
+  display: block;
+}
+
+.player-one-score-container,
+.player-two-score-container,
+.player-three-score-container {
+  display: inline-block;
+}
+
+.puzzle-grid-container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(4, 60px);
+  grid-template-columns: repeat(14, 60px);
+  width: 840px;
+}
+
+.puzzle-grid-square {
+  border: 1px solid blue;
+}
+
+.puzzle-grid-square-top-left,
+.puzzle-grid-square-top-right,
+.puzzle-grid-square-bottom-left,
+.puzzle-grid-square-bottom-right {
+  border: none;
+}
+
+
+
+
+.wheel-prize-display {
+  float: right;
+  margin-right: 50px;
+}
