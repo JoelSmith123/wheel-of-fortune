@@ -2,6 +2,7 @@ const { expect } = require('Chai')
 const Puzzle = require('../lib/Puzzle')
 
 describe('Puzzle', () => {
+  var puzzle
   beforeEach( () => {
     puzzle = new Puzzle();
   })
