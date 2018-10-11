@@ -1,18 +1,20 @@
 const { expect } = require('Chai')
 const Round = require('../lib/Round')
-const Puzzle = require('../lib/Puzzle')
+const puzzle = require('../lib/Puzzle')
+const Data = require('../lib/data')
 
 
 
-describe('Round', () => {
-  var round
-  beforeEach( () => {
-    round = new Round()
-  })
+describe.only('Round', () => {
+  // var round
+  // beforeEach( () => {
+  //   round = new Round()
+  // })
 
   it('should fetch a random puzzle from our dataset', () => {
+    var round = new Round()
     round.getNewPuzzle()
-    expect(puzzle.currentPuzzle).to.equal(!undefined)
+    expect(round.getNewPuzzle()).to.not.be.undefined;
   })
 
 })
