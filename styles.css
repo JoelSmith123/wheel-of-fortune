@@ -2,6 +2,10 @@
 
 }
 
+.display-mode-none {
+  display: none;
+}
+
 .player-scores-container {
   display: block;
 }
