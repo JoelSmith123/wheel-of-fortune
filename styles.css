@@ -31,7 +31,9 @@
   border: none;
 }
 
-
+.spin-the-wheel {
+  display: none;
+}
 
 
 .wheel-prize-display {
