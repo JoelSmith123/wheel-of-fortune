@@ -1,8 +1,6 @@
 $('.spin-wheel').on('click', displaySpinWheel)
-
+$('.guess-letter').on('click', puzzle.checkLetters())
 
 function displaySpinWheel(event) {
-  $('.spin-the-wheel').show()
+  $('.hidden-guess-section').addClass('spin-the-wheel')
 }
-
-console.log(2)

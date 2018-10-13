@@ -31,8 +31,29 @@
   border: none;
 }
 
-.spin-the-wheel {
+.button-section {
+  position: relative;
+}
+
+.hidden-guess-section {
   display: none;
+}
+
+.spin-the-wheel {
+  height: 100px;
+  width: 50%;
+  display: none;
+  position: absolute;
+  background: purple;
+  display: flex;
+}
+
+.letter-guess-input {
+  background: none;
+  border-bottom: 2px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
 }
 
 

@@ -33,33 +33,20 @@
   <h1 class='wheel-prize-display'>$550</h1>
 
 <div class='puzzle-grid-container'>
-  <div class='puzzle-grid-square puzzle-grid-square-top-left'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square puzzle-grid-square-top-right'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
+  <div class='puzzle-grid-square-top-left'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square top-tile'></div>
+  <div class='puzzle-grid-square-top-right'></div>
   <div class='puzzle-grid-square'></div>
   <div class='puzzle-grid-square'></div>
   <div class='puzzle-grid-square'></div>
@@ -75,7 +62,6 @@
   <div class='puzzle-grid-square'></div>
   <div class='puzzle-grid-square'></div>
   <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square puzzle-grid-square-bottom-left'></div>
   <div class='puzzle-grid-square'></div>
   <div class='puzzle-grid-square'></div>
   <div class='puzzle-grid-square'></div>
@@ -88,14 +74,28 @@
   <div class='puzzle-grid-square'></div>
   <div class='puzzle-grid-square'></div>
   <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square puzzle-grid-square-bottom-right'></div>
+  <div class='puzzle-grid-square'></div>
+  <div class='puzzle-grid-square-bottom-left'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square bottom-tile'></div>
+  <div class='puzzle-grid-square-bottom-right'></div>
 </div>
 
 <h3 class='guessed-letter-list'>R, T, S, D, F</h3>
-
+<section class='button-section'>
 <!-- Spin the wheel pop-up -->
-  <section class='spin-the-wheel'>
-    <input type="" name="">
+  <section class='hidden-guess-section'>
+    <input class='letter-guess-input' type="" name="">
     <button class='guess-letter'>Guess Letter</button>
   </section>
 
@@ -106,6 +106,7 @@
 <button class='solve-puzzle'>Solve the Puzzle</button>
 
 <button class='quit-game'>QUIT GAME</button>
+</section>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src='index.js'></script>
 </body>
