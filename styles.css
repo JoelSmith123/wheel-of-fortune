@@ -1,9 +1,58 @@
-.welcome-page {
+* {
+  outline: none;
+}
 
+@font-face {
+  font-family: 'fortune';
+  src: url('SF Fortune Wheel.ttf');
 }
 
 .display-mode-none {
   display: none;
+}
+
+.welcome-page {
+  text-align: center;
+}
+
+.welcome-page-title {
+  font-family: fortune;
+  margin-top: 200px;
+}
+
+.player-name-submit-form {
+  height: 40px;
+}
+
+.player-name-input,
+.submit-players-button {
+  box-sizing: border-box;
+  border: 2px solid #000;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.player-name-input {
+  border-right: none;
+  caret-width: 4px;
+  font-size: 28px;
+  width: 30%;
+}
+
+.submit-players-button {
+  background-color: #865AB7; background-image: -webkit-gradient(linear, left top, left bottom, from(#865AB7), to(#3D2B81));
+  border-left: none;
+  margin-left: -4.1px;
+  width: 40px;
+}
+
+.submit-players-button:hover {
+  background-color: #865AB7; background-image: -webkit-gradient(linear, left top, left bottom, from(#5d3e80), to(#24194d));
+}
+
+.fa-check-circle {
+  color: #fff;
+  font-size: 20px;
 }
 
 .player-scores-container {
@@ -42,3 +91,4 @@
   float: right;
   margin-right: 50px;
 }
+

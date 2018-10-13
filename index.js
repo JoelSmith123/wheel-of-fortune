@@ -1,12 +1,23 @@
-let welcomePage = document.querySelector('.welcome-page')
-let mainGameDisplay = document.querySelector('.main-game-display')
-let submitPlayersButton = document.querySelector('.submit-players-button')
+let welcomePage = $('.welcome-page')
+let mainGameDisplay = $('.main-game-display')
+let submitPlayersButton = $('.submit-players-button')
+
+
+submitPlayersButton.on('click', changeGameDisplay)
 
 
 function changeGameDisplay(e) {
   e.preventDefault()
-  welcomePage.classList.add('display-mode-none')
-  mainGameDisplay.classList.remove('display-mode-none')
+  welcomePage.addClass('display-mode-none')
+  mainGameDisplay.removeClass('display-mode-none')
 }
 
-submitPlayersButton.addEventListener('click', changeGameDisplay)
+// submitPlayersButton on click
+//    if a name hasnt been entered yet 
+//        start new game, keep on welcome screen
+//        assign input to property of player
+//    else
+//        assign input to next property of player that isnt undefined
+//    if all players arent undefined
+//        maybe change the input accept button to a start game button
+//        hide the welcome page, display the game page
