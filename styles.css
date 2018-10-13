@@ -44,16 +44,48 @@
   width: 50%;
   display: none;
   position: absolute;
-  background: purple;
+  background: #3700DC;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.letter-guess-input {
+.guess-letter-input {
+  height: 50px;
   background: none;
   border-bottom: 2px solid black;
   border-left: none;
   border-top: none;
   border-right: none;
+}
+
+
+.guess-letter-btn {
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);
+  background-color: #33bdef;
+  border-radius: 20px;
+  border: 1px solid #057fd0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 11px 33px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #5b6178;
+}
+
+.guess-letter-btn:hover {
+  background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#33bdef',GradientType=0);
+  background-color: #019ad2;
+}
+
+.guess-letter-btn: active {
+  position: relative;
+  top: 1px;
 }
 
 
