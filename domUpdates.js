@@ -41,7 +41,7 @@ const domUpdates = {
   },
 
   appendGuessToDom(currentGuess, answerLettersArray) {
-    if (answerLettersArray.length < 14) {
+    if (answerLettersArray.length < 15) {
       let column = 0
       let stringedArray = answerLettersArray.split('')
       stringedArray.forEach((letter) => {
@@ -57,7 +57,7 @@ const domUpdates = {
      let wordArray = answerLettersArray.split(' ');
      wordArray.forEach((word) => {
        column += word.length
-       if (column < 13) {
+       if (column < 15) {
          let newArray = word.split('')
          newArray.forEach((letter) => {
           if(letter === currentGuess) {
@@ -66,8 +66,10 @@ const domUpdates = {
           }
           columnOne += 1
         })
+        columnOne += 1
+
        } else {
-         column = 12
+         column = 14
          let newArray = word.split('')
          newArray.forEach((letter) => {
            console.log(letter)
