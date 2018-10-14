@@ -7,6 +7,7 @@ const startGameButtonText = $('.start-game-button-text')
 const mainGameDisplayGrid = $('.main-game-display-grid')
 const playersNamesArr = []
 let game
+let wheel
 
 const domUpdates = {
   
@@ -22,9 +23,21 @@ const domUpdates = {
       acceptNewPlayerName(player3NameDisplay, 2)
       changeButtonSubmitToStart()
     } else if (playersNamesArr.length === 3) {
+      game.startNewRound()
       changeGameDisplay()
 
     }
+  },
+
+  updateRoundCategory(category) {
+    $('.puzzle-category').text(category)
+  },
+
+  spinWheel(event) {
+    wheel = new Wheel()
+    wheel.wheelSpin()
+    $('.hidden-guess-section').addClass('spin-the-wheel')
+    $('.wheel-prize-display').text(wheel.currentValue)
   }
 
 }
@@ -34,6 +47,7 @@ function acceptNewPlayerName(player, playerIndex) {
   playersNamesArr.push(playerNameInput.val())
   game.players[playerIndex].name = playerNameInput.val()
   displayPlayersNamesOnGame(playerIndex)
+  displayPlayersScoresOnGame(playerIndex)
   playerNameInput.val('')
 }
 
@@ -49,12 +63,15 @@ function changeGameDisplay() {
   mainGameDisplay.removeClass('display-mode-none')
 }
 
+
+
 function displayPlayersNamesOnGame(playerIndex) {
-  // console.log($(`.player${playerIndex}NameGameDisplay`).text())
-  console.log(playerNameInput.val())
-   $(`.player${playerIndex + 1}NameGameDisplay`).text(playerNameInput.val())
+   $(`.player${playerIndex + 1}-name-game-display`).text(playerNameInput.val())
 }
 
+function displayPlayersScoresOnGame(playerIndex) {
+  $(`.player${playerIndex + 1}-score`).text(game.players[playerIndex].totalScore)
+}
 
 if (typeof module !== 'undefined') {
   module.exports = domUpdates;

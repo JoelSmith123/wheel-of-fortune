@@ -21,16 +21,16 @@
   <div class='main-game-display display-mode-none'>
     <div class='player-scores-container'>
       <div class='player-one-score-container'>
-        <h2 class='player1NameGameDisplay'>Player 1</h2>
-        <h2 class='player-one-score'>player 1 score</h2>            
+        <h2 class='player1-name-game-display'>Player 1</h2>
+        <h2 class='player1-score'>player 1 score</h2>            
       </div>
       <div class='player-two-score-container'>
-        <h2 class='player2NameGameDisplay'>Player 2</h2>
-        <h2 class='player-two-score'>player 2 score</h2>      
+        <h2 class='player2-name-game-display'>Player 2</h2>
+        <h2 class='player2-score'>player 2 score</h2>      
       </div>
       <div class='player-three-score-container'>
-        <h2 class='player3NameGameDisplay'>Player 3</h2>
-        <h2 class='player-three-score'>player 3 score</h2>      
+        <h2 class='player3-name-game-display'>Player 3</h2>
+        <h2 class='player3-score'>player 3 score</h2>      
       </div>
     </div>
 
@@ -91,6 +91,7 @@
       <div class='puzzle-grid-square bottom-tile green-tile'></div>
       <div class='puzzle-grid-square bottom-tile green-tile bottom-right-tile'></div>
       <div class='puzzle-grid-square-bottom-right'></div>
+      <h2 class='puzzle-category'></h2>
     </div>
 
     <div class='game-wheel'>
@@ -129,6 +130,7 @@
       <section class='hidden-guess-section'>
         <input class='guess-letter-input' type="" name="">
         <button class='guess-letter-btn'>Guess Letter</button>
+        <h2 class='wheel-prize-display'></h2>
       </section>
       <!-- End of spin wheel pop-up -->
       <button class='spin-wheel'>Spin the Wheel</button>
@@ -140,6 +142,10 @@
 
 </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src='./lib/Data.js'></script>
+  <script type="text/javascript" src='./lib/Wheel.js'></script>
+  <script type="text/javascript" src='./lib/Puzzle.js'></script>
+  <script type="text/javascript" src='./lib/Round.js'></script>
   <script type="text/javascript" src='./lib/Game.js'></script>
   <script type="text/javascript" src='domUpdates.js'></script>
   <script type="text/javascript" src='index.js'></script>

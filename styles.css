@@ -26,6 +26,13 @@
   margin-top: 200px;
 }
 
+.welcome-page-player1-name,
+.welcome-page-player2-name,
+.welcome-page-player3-name {
+  font-family: 'fortune';
+  font-weight: lighter;
+}
+
 .player-name-submit-form {
   height: 40px;
 }
@@ -40,7 +47,6 @@
 
 .player-name-input {
   border-right: none;
-  caret-width: 4px;
   font-size: 28px;
   width: 30%;
 }
@@ -161,6 +167,13 @@
 .puzzle-grid-square-bottom-left,
 .puzzle-grid-square-bottom-right {
   border: none;
+}
+
+.puzzle-category {
+  font-family: 'fortune';
+  font-weight: lighter;
+  grid-column: 1 / 15;
+  text-align: center;
 }
 
 /*Start of game wheel styling*/
@@ -412,7 +425,6 @@
 
 
 .wheel-prize-display {
-  float: right;
-  margin-right: 50px;
+  
 }
 
