@@ -49,8 +49,36 @@ const domUpdates = {
           var thisDiv = document.querySelector(`.tile-${column}`);
           thisDiv.innerText = currentGuess;
         }
-      column += 1
-    })
+        column += 1
+      })
+    } else {
+     let column = 0
+     let columnOne = 0
+     let wordArray = thisArray.split(' ');
+     wordArray.forEach((word) => {
+       column += word.length
+       if (column < 13) {
+         let newArray = word.split('')
+         newArray.forEach((letter) => {
+          if(letter === currentGuess) {
+            var thisDiv = document.querySelector(`.div-${columnOne}`);
+            thisDiv.innerText = currentGuess;
+          }
+          columnOne += 1
+        })
+       } else {
+         column = 12
+         let newArray = word.split('')
+         newArray.forEach((letter) => {
+           console.log(letter)
+           if(letter === currentGuess) {
+            var thisDiv = document.querySelector(`.div-${column}`);
+            thisDiv.innerText = currentGuess;
+          }
+          column += 1
+        })
+       }
+     })
    }
 
   }
