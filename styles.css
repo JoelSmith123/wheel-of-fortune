@@ -21,7 +21,50 @@
 }
 
 .puzzle-grid-square {
-  border: 1px solid blue;
+  border: 2px solid black;
+  position: relative;
+}
+
+.top-tile {
+  box-shadow: 0px -9px 0px 0px #00EFFF;
+  border-top: 4px solid black;
+}
+
+.bottom-tile {
+  border-bottom: 4px solid black;
+  box-shadow: 0px 9px 0px 0px #00EFFF;
+}
+
+.top-left-tile {
+  border-top: 4px solid black;
+  border-left: 4px solid black;  
+  box-shadow: 0px -9px 0px 0px #00EFFF,
+              -9px 0px 0px 0px #00EFFF,
+              -9px -9px 0px 0px #00EFFF;
+}
+
+.top-right-tile {
+  border-top: 4px solid black;
+  border-right: 4px solid black;
+  box-shadow: 0px -9px 0px 0px #00EFFF,
+              9px 0px 0px 0px #00EFFF,
+              9px -9px 0px 0px #00EFFF;
+}
+
+.bottom-left-tile {
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
+  box-shadow: 0px 9px 0px 0px #00EFFF,
+              -9px 0px 0px 0px #00EFFF,
+              -9px 9px 0px 0px #00EFFF;
+}
+
+.bottom-right-tile {
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;  
+  box-shadow: 0px 9px 0px 0px #00EFFF,
+              9px 0px 0px 0px #00EFFF,
+              9px 9px 0px 0px #00EFFF;
 }
 
 .puzzle-grid-square-top-left,
@@ -57,12 +100,12 @@
 @keyframes slidein {
   from {
     margin-left: 0%;
-    width:300%
+    width: 300%
   }
   
   to {
     margin-right:50%;
-    width:100%;
+    width: 50%;
   }
 }
 
