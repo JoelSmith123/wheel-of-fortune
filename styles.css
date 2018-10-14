@@ -1,12 +1,3 @@
-body {
-  display: grid;
-  grid-template-areas: "player-scores game-wheel"
-                       "game-board game-wheel"
-                       "button-section game-wheel";
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 2fr 5fr 1fr;
-}
-
 * {
   outline: none;
 }
@@ -62,6 +53,15 @@ body {
 .fa-check-circle {
   color: #fff;
   font-size: 20px;
+}
+
+.main-game-display-grid {
+  display: grid;
+  grid-template-areas: "player-scores game-wheel"
+                       "game-board game-wheel"
+                       "button-section game-wheel";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2fr 5fr 1fr;
 }
 
 .player-scores-container {
@@ -292,7 +292,7 @@ body {
   border-color: #00C27C transparent;
 }
 
-h1 {
+.game-wheel {
     margin-top: -275px;
     color: black;
     position: relative;

@@ -6,15 +6,16 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
+
   <div class='welcome-page'>
     <h1 class='welcome-page-title'>WHEEL OF FORTUNE</h1>
     <form class='player-name-submit-form'>
       <input class='player-name-input' type="text" name="playername">
-      <button class='submit-players-button'><i class="far fa-check-circle"></i></button>
+      <button class='submit-players-button'><i class="far fa-check-circle"></i><h4 class='start-game-button-text display-mode-none'>START GAME</h4></button>
     </form>
-    <h3>player1</h3>
-    <h3>player2</h3>
-    <h3>player3</h3>
+    <h3 class='welcome-page-player1-name'></h3>
+    <h3 class='welcome-page-player2-name'></h3>
+    <h3 class='welcome-page-player3-name'></h3>
   </div>
 
   <div class='main-game-display display-mode-none'>
@@ -136,9 +137,9 @@
       <button class='quit-game'>QUIT GAME</button>
     </section>
   </div>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src='index.js'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src='index.js'></script>
+
 </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src='domUpdates.js'></script>
+  <script type="text/javascript" src='index.js'></script>
 </html>
