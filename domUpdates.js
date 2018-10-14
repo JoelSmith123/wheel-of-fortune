@@ -40,6 +40,21 @@ const domUpdates = {
     $('.wheel-prize-display').text(wheel.currentValue)
   }
 
+  appendGuessToDom(letter, answerLettersArray) {
+    if (thisArray.length < 14) {
+      let column = 0
+      let stringedArray = thisArray.split('')
+      stringedArray.forEach((letter) => {
+        if(letter === currentGuess) {
+          var thisDiv = document.querySelector(`.tile-${column}`);
+          thisDiv.innerText = currentGuess;
+        }
+      column += 1
+    })
+   }
+
+  }
+
 }
 
 function acceptNewPlayerName(player, playerIndex) {
