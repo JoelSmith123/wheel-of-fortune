@@ -1,8 +1,14 @@
-.welcome-page {
-
+body {
+  display: grid;
+  grid-template-areas: "player-scores game-wheel"
+                       "game-board game-wheel"
+                       "button-section game-wheel";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
 }
 
 .player-scores-container {
+  grid-area: player-scores;
   display: block;
 }
 
@@ -13,6 +19,7 @@
 }
 
 .puzzle-grid-container {
+  grid-area: game-board;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: repeat(4, 70px);
@@ -78,7 +85,12 @@
   border: none;
 }
 
+.game-wheel {
+  grid-area: game-wheel;
+}
+
 .button-section {
+  grid-area: button-section;
   position: relative;
 }
 
