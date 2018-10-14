@@ -9,3 +9,5 @@ submitPlayersButton.on('click', domUpdates.submitPlayersName)
 // $('.guess-letter').on('click', puzzle.checkLetters())
 $('.spin-wheel').on('click', domUpdates.spinWheel)
 
+$('.guess-letter-btn').on('click', domUpdates.comparePlayerInputToAnswer)
+

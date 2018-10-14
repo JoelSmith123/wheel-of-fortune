@@ -38,12 +38,12 @@ const domUpdates = {
     wheel.wheelSpin()
     $('.hidden-guess-section').addClass('spin-the-wheel')
     $('.wheel-prize-display').text(wheel.currentValue)
-  }
+  },
 
-  appendGuessToDom(letter, answerLettersArray) {
-    if (thisArray.length < 14) {
+  appendGuessToDom(currentGuess, answerLettersArray) {
+    if (answerLettersArray.length < 14) {
       let column = 0
-      let stringedArray = thisArray.split('')
+      let stringedArray = answerLettersArray.split('')
       stringedArray.forEach((letter) => {
         if(letter === currentGuess) {
           var thisDiv = document.querySelector(`.tile-${column}`);
@@ -54,14 +54,14 @@ const domUpdates = {
     } else {
      let column = 0
      let columnOne = 0
-     let wordArray = thisArray.split(' ');
+     let wordArray = answerLettersArray.split(' ');
      wordArray.forEach((word) => {
        column += word.length
        if (column < 13) {
          let newArray = word.split('')
          newArray.forEach((letter) => {
           if(letter === currentGuess) {
-            var thisDiv = document.querySelector(`.div-${columnOne}`);
+            var thisDiv = document.querySelector(`.tile-${columnOne}`);
             thisDiv.innerText = currentGuess;
           }
           columnOne += 1
@@ -72,7 +72,7 @@ const domUpdates = {
          newArray.forEach((letter) => {
            console.log(letter)
            if(letter === currentGuess) {
-            var thisDiv = document.querySelector(`.div-${column}`);
+            var thisDiv = document.querySelector(`.tile-${column}`);
             thisDiv.innerText = currentGuess;
           }
           column += 1
@@ -81,6 +81,10 @@ const domUpdates = {
      })
    }
 
+  },
+
+  comparePlayerInputToAnswer() {
+    game.checkLetters($('.guess-letter-input').val())
   }
 
 }
