@@ -1,3 +1,12 @@
+body {
+  display: grid;
+  grid-template-areas: "player-scores game-wheel"
+                       "game-board game-wheel"
+                       "button-section game-wheel";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2fr 5fr 1fr;
+}
+
 * {
   outline: none;
 }
@@ -56,6 +65,7 @@
 }
 
 .player-scores-container {
+  grid-area: player-scores;
   display: block;
 }
 
@@ -66,15 +76,63 @@
 }
 
 .puzzle-grid-container {
+  grid-area: game-board;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: repeat(4, 60px);
+  grid-template-rows: repeat(4, 70px);
   grid-template-columns: repeat(14, 60px);
   width: 840px;
 }
 
 .puzzle-grid-square {
-  border: 1px solid blue;
+  border: 2px solid black;
+  position: relative;
+}
+
+.top-tile {
+  box-shadow: 0px -9px 0px 0px #00EFFF;
+  border-top: 4px solid black;
+}
+
+.bottom-tile {
+  border-bottom: 4px solid black;
+  box-shadow: 0px 9px 0px 0px #00EFFF;
+}
+
+.top-left-tile {
+  border-top: 4px solid black;
+  border-left: 4px solid black;  
+  box-shadow: 0px -9px 0px 0px #00EFFF,
+              -9px 0px 0px 0px #00EFFF,
+              -9px -9px 0px 0px #00EFFF;
+}
+
+.top-right-tile {
+  border-top: 4px solid black;
+  border-right: 4px solid black;
+  box-shadow: 0px -9px 0px 0px #00EFFF,
+              9px 0px 0px 0px #00EFFF,
+              9px -9px 0px 0px #00EFFF;
+}
+
+.bottom-left-tile {
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
+  box-shadow: 0px 9px 0px 0px #00EFFF,
+              -9px 0px 0px 0px #00EFFF,
+              -9px 9px 0px 0px #00EFFF;
+}
+
+.green-tile {
+  background-image: url("images/WheelOfFortune.png");
+}
+
+.bottom-right-tile {
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;  
+  box-shadow: 0px 9px 0px 0px #00EFFF,
+              9px 0px 0px 0px #00EFFF,
+              9px 9px 0px 0px #00EFFF;
 }
 
 .puzzle-grid-square-top-left,
@@ -84,7 +142,252 @@
   border: none;
 }
 
+/*Start of game wheel styling*/
 
+.game-wheel {
+  grid-area: game-wheel;
+  height: 100%;
+  width: 100%;
+}
+
+.wheel-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+}
+
+.wheel-pie-piece {
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid blue;
+  border-width: 300px 40px 0;
+  transform-origin: 40px 299px;
+  right: -40px;
+
+}
+
+.bankrupt {
+  color: white;
+  font-size: 23px;
+  margin-left: -13px;
+}
+
+.sec-2 {
+  transform: rotate(15deg);
+  border-color: #FCFA00 transparent;
+}
+
+.sec-3 {
+  transform: rotate(30deg);
+  border-color: #FF0000 transparent;
+}
+
+.sec-4 {
+  transform: rotate(45deg);
+  border-color: #00BAFF transparent;
+}
+
+.sec-5 {
+  transform: rotate(60deg);
+  border-color: #FF5900 transparent;
+}
+
+.sec-6 {
+  transform: rotate(75deg);
+  border-color: #BC68DD transparent;
+}
+
+.sec-7 {
+  transform: rotate(90deg);
+  border-color: #FCFA00 transparent;
+}
+
+.sec-8 {
+  transform: rotate(105deg);
+  border-color: #FFFFFF transparent;
+}
+
+.sec-9 {
+  transform: rotate(120deg);
+  border-color: #FF0000 transparent;
+}
+
+.sec-10 {
+  transform: rotate(135deg);
+  border-color: #00BAFF transparent;
+}
+
+.sec-11 {
+  transform: rotate(150deg);
+  border-color: #00C27C transparent;
+}
+
+.sec-12 {
+  transform: rotate(165deg);
+  border-color: #FF919A transparent;
+}
+
+.sec-13 {
+  transform: rotate(180deg);
+  border-color: #000000 transparent;
+}
+
+.sec-14 {
+  transform: rotate(195deg);
+  border-color: #BC68DD transparent;
+}
+
+.sec-15 {
+  transform: rotate(210deg);
+  border-color: #00FFFF transparent;
+}
+
+.sec-16 {
+  transform: rotate(225deg);
+  border-color: #00BAFF transparent;
+}
+
+.sec-17 {
+  transform: rotate(240deg);
+  border-color: #FFFFFF transparent;
+}
+
+.sec-18 {
+  transform: rotate(255deg);
+  border-color: #FF0000 transparent;
+}
+
+.sec-19 {
+  transform: rotate(270deg);
+  border-color: #BC68DD transparent;
+}
+
+.sec-20 {
+  transform: rotate(285deg);
+  border-color: #FF919A transparent;
+}
+
+.sec-21 {
+  transform: rotate(300deg);
+  border-color: #00C27C transparent;
+}
+
+.sec-22 {
+  transform: rotate(315deg);
+  border-color: #FF5900 transparent;
+}
+
+.sec-23 {
+  transform: rotate(330deg);
+  border-color: #000000 transparent;
+}
+
+.sec-24 {
+  transform: rotate(345deg);
+  border-color: #00C27C transparent;
+}
+
+h1 {
+    margin-top: -275px;
+    color: black;
+    position: relative;
+    z-index: 10000000;
+    display: block;
+    text-align: center;
+    font-size: 36px;
+    margin-left: -21px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.lose {
+  font-size: 20px;
+  margin-left: -23px;
+}
+
+.lose-a-turn {
+  font-size: 20px;
+  writing-mode: horizontal-tb;
+  text-orientation: initial;
+}
+
+/*End of game wheel styling*/
+
+.button-section {
+  grid-area: button-section;
+  position: relative;
+}
+
+.hidden-guess-section {
+  display: none;
+}
+
+.spin-the-wheel {
+  height: 100px;
+  width: 50%;
+  display: none;
+  position: absolute;
+  background: #3700DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: left;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+    width: 300%
+  }
+  
+  to {
+    margin-right:50%;
+    width: 50%;
+  }
+}
+
+.guess-letter-input {
+  height: 50px;
+  background: none;
+  border-bottom: 2px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+
+.guess-letter-btn {
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  background-color: #33bdef;
+  border-radius: 20px;
+  border: 1px solid #057fd0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 11px 33px;
+  text-shadow: 0px -1px 0px #5b6178;
+  margin-left: 15px;
+}
+
+.guess-letter-btn:hover {
+  background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  background-color: #019ad2;
+}
+
+.guess-letter-btn: active {
+  position: relative;
+  top: 1px;
+}
 
 
 .wheel-prize-display {
