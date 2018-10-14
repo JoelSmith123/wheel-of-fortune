@@ -15,7 +15,7 @@
 .puzzle-grid-container {
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: repeat(4, 60px);
+  grid-template-rows: repeat(4, 70px);
   grid-template-columns: repeat(14, 60px);
   width: 840px;
 }
@@ -57,6 +57,10 @@
   box-shadow: 0px 9px 0px 0px #00EFFF,
               -9px 0px 0px 0px #00EFFF,
               -9px 9px 0px 0px #00EFFF;
+}
+
+.green-tile {
+  background-image: url("images/WheelOfFortune.png");
 }
 
 .bottom-right-tile {
