@@ -23,6 +23,7 @@ const domUpdates = {
       changeButtonSubmitToStart()
     } else if (playersNamesArr.length === 3) {
       changeGameDisplay()
+
     }
   }
 
@@ -32,6 +33,7 @@ function acceptNewPlayerName(player, playerIndex) {
   player.text(playerNameInput.val())
   playersNamesArr.push(playerNameInput.val())
   game.players[playerIndex].name = playerNameInput.val()
+  displayPlayersNamesOnGame(playerIndex)
   playerNameInput.val('')
 }
 
@@ -45,6 +47,12 @@ function changeGameDisplay() {
   welcomePage.addClass('display-mode-none')
   mainGameDisplay.addClass('main-game-display-grid')
   mainGameDisplay.removeClass('display-mode-none')
+}
+
+function displayPlayersNamesOnGame(playerIndex) {
+  // console.log($(`.player${playerIndex}NameGameDisplay`).text())
+  console.log(playerNameInput.val())
+   $(`.player${playerIndex + 1}NameGameDisplay`).text(playerNameInput.val())
 }
 
 

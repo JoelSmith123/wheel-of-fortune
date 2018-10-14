@@ -7,6 +7,12 @@
   src: url('SF Fortune Wheel.ttf');
 }
 
+@-webkit-keyframes opacityPulse {
+    0% {opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {opacity: 0.0;}
+}
+
 .display-mode-none {
   display: none;
 }
@@ -48,6 +54,21 @@
 
 .submit-players-button:hover {
   background-color: #865AB7; background-image: -webkit-gradient(linear, left top, left bottom, from(#5d3e80), to(#24194d));
+}
+
+.start-game-button {
+  width: 80px;
+}
+
+.start-game-button-text {
+ color: #fff;
+ font-family: 'fortune';
+ font-size: 12px;
+ font-weight: lighter;
+ margin-top: 6px;
+ animation: opacityPulse 2s ease-out;
+ animation-iteration-count: infinite;
+ opacity: 1;
 }
 
 .fa-check-circle {
