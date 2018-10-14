@@ -3,138 +3,142 @@
 <head>
   <title>Wheel Of Fortune</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
-  <!-- <div class='welcome-page'>
-    <h1>Wheel of Fortune</h1>
-    <form>
-      <input type="" name="">
-      <button></button>
+  <div class='welcome-page'>
+    <h1 class='welcome-page-title'>WHEEL OF FORTUNE</h1>
+    <form class='player-name-submit-form'>
+      <input class='player-name-input' type="text" name="playername">
+      <button class='submit-players-button'><i class="far fa-check-circle"></i></button>
     </form>
     <h3>player1</h3>
     <h3>player2</h3>
     <h3>player3</h3>
-  </div> -->
-  <div class='player-scores-container'>
-    <div class='player-one-score-container'>
-      <h2>Player 1</h2>
-      <h2 class='player-one-score'>player 1 score</h2>            
-    </div>
-    <div class='player-two-score-container'>
-      <h2>Player 2</h2>
-      <h2 class='player-two-score'>player 2 score</h2>      
-    </div>
-    <div class='player-three-score-container'>
-      <h2>Player 3</h2>
-      <h2 class='player-three-score'>player 3 score</h2>      
-    </div>
   </div>
 
-<div class='puzzle-grid-container'>
-  <div class='puzzle-grid-square-top-left'></div>
-  <div class='puzzle-grid-square top-left-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-tile green-tile'></div>
-  <div class='puzzle-grid-square top-right-tile green-tile'></div>
-  <div class='puzzle-grid-square-top-right'></div>
-  <div class='puzzle-grid-square top-left-tile green-tile'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square top-right-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-left-tile green-tile'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square'></div>
-  <div class='puzzle-grid-square bottom-right-tile green-tile'></div>
-  <div class='puzzle-grid-square-bottom-left'></div>
-  <div class='puzzle-grid-square bottom-tile bottom-left-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile'></div>
-  <div class='puzzle-grid-square bottom-tile green-tile bottom-right-tile'></div>
-  <div class='puzzle-grid-square-bottom-right'></div>
-</div>
+  <div class='main-game-display display-mode-none'>
+    <div class='player-scores-container'>
+      <div class='player-one-score-container'>
+        <h2>Player 1</h2>
+        <h2 class='player-one-score'>player 1 score</h2>            
+      </div>
+      <div class='player-two-score-container'>
+        <h2>Player 2</h2>
+        <h2 class='player-two-score'>player 2 score</h2>      
+      </div>
+      <div class='player-three-score-container'>
+        <h2>Player 3</h2>
+        <h2 class='player-three-score'>player 3 score</h2>      
+      </div>
+    </div>
 
-<div class='game-wheel'>
-  <div class="wheel-wrapper">
-    <div class='sec-1 wheel-pie-piece'><h1>$900</h1></div>
-    <div class='sec-2 wheel-pie-piece'><h1>$2500</h1></div>
-    <div class='sec-3 wheel-pie-piece'><h1>$600</h1></div>
-    <div class='sec-4 wheel-pie-piece'><h1>$700</h1></div>
-    <div class='sec-5 wheel-pie-piece'><h1>$600</h1></div>
-    <div class='sec-6 wheel-pie-piece'><h1>$650</h1></div>
-    <div class='sec-7 wheel-pie-piece'><h1>$500</h1></div>
-    <div class='sec-8 wheel-pie-piece'><h1 class='lose'><span class='lose-a-turn'>Lose a</span> Turn</h1></div>
-    <div class='sec-9 wheel-pie-piece'><h1>$700</h1></div>
-    <div class='sec-10 wheel-pie-piece'><h1>$600</h1></div>
-    <div class='sec-11 wheel-pie-piece'><h1>$550</h1></div>
-    <div class='sec-12 wheel-pie-piece'><h1>$500</h1></div>
-    <div class='sec-13 wheel-pie-piece'><h1 class='bankrupt'>Bankrupt</h1></div>
-    <div class='sec-14 wheel-pie-piece'><h1>$600</h1></div>
-    <div class='sec-15 wheel-pie-piece'><h1>$700</h1></div>
-    <div class='sec-16 wheel-pie-piece'><h1>$800</h1></div>
-      <div class='sec-17 wheel-pie-piece'><h1 class='lose'><span class='lose-a-turn'>Lose a</span> Turn</h1></div>
-    <div class='sec-18 wheel-pie-piece'><h1>$500</h1></div>
-    <div class='sec-19 wheel-pie-piece'><h1>$650</h1></div>
-    <div class='sec-20 wheel-pie-piece'><h1>$500</h1></div>
-    <div class='sec-21 wheel-pie-piece'><h1>$900</h1></div>
-    <div class='sec-22 wheel-pie-piece'><h1>$1000</h1></div>
-    <div class='sec-23 wheel-pie-piece'><h1 class="bankrupt">Bankrupt</h1></div>
-    <div class='sec-24 wheel-pie-piece'><h1>$750</h1></div>
+    <div class='puzzle-grid-container'>
+      <div class='puzzle-grid-square-top-left'></div>
+      <div class='puzzle-grid-square top-left-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-tile green-tile'></div>
+      <div class='puzzle-grid-square top-right-tile green-tile'></div>
+      <div class='puzzle-grid-square-top-right'></div>
+      <div class='puzzle-grid-square top-left-tile green-tile'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square top-right-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-left-tile green-tile'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square'></div>
+      <div class='puzzle-grid-square bottom-right-tile green-tile'></div>
+      <div class='puzzle-grid-square-bottom-left'></div>
+      <div class='puzzle-grid-square bottom-tile bottom-left-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile'></div>
+      <div class='puzzle-grid-square bottom-tile green-tile bottom-right-tile'></div>
+      <div class='puzzle-grid-square-bottom-right'></div>
+    </div>
+
+    <div class='game-wheel'>
+      <div class="wheel-wrapper">
+        <div class='sec-1 wheel-pie-piece'><h1>$900</h1></div>
+        <div class='sec-2 wheel-pie-piece'><h1>$2500</h1></div>
+        <div class='sec-3 wheel-pie-piece'><h1>$600</h1></div>
+        <div class='sec-4 wheel-pie-piece'><h1>$700</h1></div>
+        <div class='sec-5 wheel-pie-piece'><h1>$600</h1></div>
+        <div class='sec-6 wheel-pie-piece'><h1>$650</h1></div>
+        <div class='sec-7 wheel-pie-piece'><h1>$500</h1></div>
+        <div class='sec-8 wheel-pie-piece'><h1 class='lose'><span class='lose-a-turn'>Lose a</span> Turn</h1></div>
+        <div class='sec-9 wheel-pie-piece'><h1>$700</h1></div>
+        <div class='sec-10 wheel-pie-piece'><h1>$600</h1></div>
+        <div class='sec-11 wheel-pie-piece'><h1>$550</h1></div>
+        <div class='sec-12 wheel-pie-piece'><h1>$500</h1></div>
+        <div class='sec-13 wheel-pie-piece'><h1 class='bankrupt'>Bankrupt</h1></div>
+        <div class='sec-14 wheel-pie-piece'><h1>$600</h1></div>
+        <div class='sec-15 wheel-pie-piece'><h1>$700</h1></div>
+        <div class='sec-16 wheel-pie-piece'><h1>$800</h1></div>
+        <div class='sec-17 wheel-pie-piece'><h1 class='lose'><span class='lose-a-turn'>Lose a</span> Turn</h1></div>
+        <div class='sec-18 wheel-pie-piece'><h1>$500</h1></div>
+        <div class='sec-19 wheel-pie-piece'><h1>$650</h1></div>
+        <div class='sec-20 wheel-pie-piece'><h1>$500</h1></div>
+        <div class='sec-21 wheel-pie-piece'><h1>$900</h1></div>
+        <div class='sec-22 wheel-pie-piece'><h1>$1000</h1></div>
+        <div class='sec-23 wheel-pie-piece'><h1 class="bankrupt">Bankrupt</h1></div>
+        <div class='sec-24 wheel-pie-piece'><h1>$750</h1></div>
+      </div>
+    </div>
+
+    <section class='button-section'>
+      <h3 class='guessed-letter-list'>R, T, S, D, F</h3>
+
+      <!-- Spin the wheel pop-up -->
+      <section class='hidden-guess-section'>
+        <input class='guess-letter-input' type="" name="">
+        <button class='guess-letter-btn'>Guess Letter</button>
+      </section>
+      <!-- End of spin wheel pop-up -->
+      <button class='spin-wheel'>Spin the Wheel</button>
+      <button class='purchase-vowel'>Buy a Vowel</button>
+      <button class='solve-puzzle'>Solve the Puzzle</button>
+      <button class='quit-game'>QUIT GAME</button>
+    </section>
   </div>
-</div>
-
-<section class='button-section'>
-  <h3 class='guessed-letter-list'>R, T, S, D, F</h3>
-<!-- Spin the wheel pop-up -->
-  <section class='hidden-guess-section'>
-    <input class='guess-letter-input' type="" name="">
-    <button class='guess-letter-btn'>Guess Letter</button>
-  </section>
-
-<!-- End of spin wheel pop-up -->
-
-<button class='spin-wheel'>Spin the Wheel</button>
-<button class='purchase-vowel'>Buy a Vowel</button>
-<button class='solve-puzzle'>Solve the Puzzle</button>
-
-<button class='quit-game'>QUIT GAME</button>
-</section>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src='index.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src='index.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src='index.js'></script>
 </body>
 </html>

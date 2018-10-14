@@ -5,7 +5,7 @@ const Data = require('../lib/data')
 
 
 
-describe.only('Round', () => {
+describe('Round', () => {
   // var round
   // beforeEach( () => {
   //   round = new Round()
