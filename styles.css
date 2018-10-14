@@ -85,9 +85,173 @@ body {
   border: none;
 }
 
+/*Start of game wheel styling*/
+
 .game-wheel {
   grid-area: game-wheel;
+  position: relative;
+  align-content: center;
 }
+
+.wheel-pie-piece {
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid blue;
+  border-width: 250px 33px 0;
+  transform-origin: 33px 249px;
+  top: 7%;
+  right: 235px;
+}
+
+.bankrupt {
+  color: white;
+  font-size: 23px;
+  margin-left: -13px;
+}
+
+.sec-2 {
+  transform: rotate(15deg);
+  border-color: #FCFA00 transparent;
+}
+
+.sec-3 {
+  transform: rotate(30deg);
+  border-color: #FF0000 transparent;
+}
+
+.sec-4 {
+  transform: rotate(45deg);
+  border-color: #00BAFF transparent;
+}
+
+.sec-5 {
+  transform: rotate(60deg);
+  border-color: #FF5900 transparent;
+}
+
+.sec-6 {
+  transform: rotate(75deg);
+  border-color: #BC68DD transparent;
+}
+
+.sec-7 {
+  transform: rotate(90deg);
+  border-color: #FCFA00 transparent;
+}
+
+.sec-8 {
+  transform: rotate(105deg);
+  border-color: #FFFFFF transparent;
+}
+
+.sec-9 {
+  transform: rotate(120deg);
+  border-color: #FF0000 transparent;
+}
+
+.sec-10 {
+  transform: rotate(135deg);
+  border-color: #00BAFF transparent;
+}
+
+.sec-11 {
+  transform: rotate(150deg);
+  border-color: #00C27C transparent;
+}
+
+.sec-12 {
+  transform: rotate(165deg);
+  border-color: #FF919A transparent;
+}
+
+.sec-13 {
+  transform: rotate(180deg);
+  border-color: #000000 transparent;
+}
+
+.sec-14 {
+  transform: rotate(195deg);
+  border-color: #BC68DD transparent;
+}
+
+.sec-15 {
+  transform: rotate(210deg);
+  border-color: #00FFFF transparent;
+}
+
+.sec-16 {
+  transform: rotate(225deg);
+  border-color: #00BAFF transparent;
+}
+
+.sec-17 {
+  transform: rotate(240deg);
+  border-color: #FFFFFF transparent;
+}
+
+.sec-18 {
+  transform: rotate(255deg);
+  border-color: #FF0000 transparent;
+}
+
+.sec-19 {
+  transform: rotate(270deg);
+  border-color: #BC68DD transparent;
+}
+
+.sec-20 {
+  transform: rotate(285deg);
+  border-color: #FF919A transparent;
+}
+
+.sec-21 {
+  transform: rotate(300deg);
+  border-color: #00C27C transparent;
+}
+
+.sec-22 {
+  transform: rotate(315deg);
+  border-color: #FF5900 transparent;
+}
+
+.sec-23 {
+  transform: rotate(330deg);
+  border-color: #000000 transparent;
+}
+
+.sec-24 {
+  transform: rotate(345deg);
+  border-color: #00C27C transparent;
+}
+
+h1 {
+  margin-top: -225px;
+  color: black;
+  position: relative;
+  z-index: 10000000;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  margin-left: -17px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.lose {
+  font-size: 20px;
+  margin-left: -23px;
+}
+
+.lose-a-turn {
+  font-size: 20px;
+  writing-mode: horizontal-tb;
+  text-orientation: initial;
+}
+
+/*End of game wheel styling*/
 
 .button-section {
   grid-area: button-section;
