@@ -4,7 +4,7 @@ body {
                        "game-board game-wheel"
                        "button-section game-wheel";
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 2fr 4fr 1fr;
+  grid-template-rows: 2fr 5fr 1fr;
 }
 
 .player-scores-container {
@@ -95,10 +95,10 @@ body {
 
 .wheel-wrapper {
   position: relative;
+  overflow: hidden;
   height: 100%;
   width: 100%;
-  top: 40px;
-  right: -330px;
+
 }
 
 .wheel-pie-piece {
@@ -110,6 +110,8 @@ body {
   border-top: 25px solid blue;
   border-width: 300px 40px 0;
   transform-origin: 40px 299px;
+  right: -40px;
+
 }
 
 .bankrupt {
