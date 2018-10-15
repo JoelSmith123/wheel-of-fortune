@@ -25,7 +25,6 @@ const domUpdates = {
     } else if (playersNamesArr.length === 3) {
       game.startNewRound()
       changeGameDisplay()
-
     }
   },
 
@@ -93,7 +92,13 @@ const domUpdates = {
     $('.guess-letter-input').addClass('display-mode-none')
     $('.guess-letter-btn-text').addClass('display-mode-none')
     $('.next-player-btn-text').removeClass('display-mode-none')
+  },
+
+  updatedPlayerIndication(index) {
+    $(`.player${index - 1}-score-container`).removeClass('background-change')
+    $(`.player${index}-score-container`).addClass('background-change')
   }
+
 
 }
 

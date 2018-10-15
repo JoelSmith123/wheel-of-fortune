@@ -17,6 +17,10 @@
   display: none;
 }
 
+.background-change {
+  background-color: red;
+}
+
 .welcome-page {
   text-align: center;
 }
@@ -96,9 +100,9 @@
   display: block;
 }
 
-.player-one-score-container,
-.player-two-score-container,
-.player-three-score-container {
+.player1-score-container,
+.player2-score-container,
+.player3-score-container {
   display: inline-block;
 }
 
