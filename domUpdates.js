@@ -91,7 +91,14 @@ const domUpdates = {
     $('.guessed-wrong-letter-message').removeClass('display-mode-none')
     $('.guess-letter-input').addClass('display-mode-none')
     $('.guess-letter-btn-text').addClass('display-mode-none')
-    $('.next-player-btn-text').removeClass('display-mode-none')
+    $('.guess-letter-btn').addClass('display-mode-none')
+    $('.next-player-btn').removeClass('display-mode-none')
+  },
+
+  toggleGuessAndNextPlayerButtons() {
+    $('.guess-letter-input').addClass('display-mode-none')
+    $('.next-player-btn').removeClass('display-mode-none')
+    $('.guess-letter-btn').addClass('display-mode-none')
   },
 
   updatedPlayerIndication(index) {
