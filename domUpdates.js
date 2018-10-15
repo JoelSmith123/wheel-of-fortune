@@ -72,7 +72,6 @@ const domUpdates = {
          column = 14
          let newArray = word.split('')
          newArray.forEach((letter) => {
-           console.log(letter)
            if(letter === currentGuess) {
             var thisDiv = document.querySelector(`.tile-${column}`);
             thisDiv.innerText = currentGuess;
@@ -87,6 +86,13 @@ const domUpdates = {
 
   comparePlayerInputToAnswer() {
     game.checkLetters($('.guess-letter-input').val())
+  },
+
+  guessedWrongLetter() {
+    $('.guessed-wrong-letter-message').removeClass('display-mode-none')
+    $('.guess-letter-input').addClass('display-mode-none')
+    $('.guess-letter-btn-text').addClass('display-mode-none')
+    $('.next-player-btn-text').removeClass('display-mode-none')
   }
 
 }
