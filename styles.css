@@ -361,6 +361,11 @@
   position: relative;
 }
 
+.guessed-letter-list {
+  font-family: 'fortune';
+  font-weight: lighter;
+}
+
 .hidden-guess-section {
   display: none;
 }

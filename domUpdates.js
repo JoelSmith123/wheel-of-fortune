@@ -85,6 +85,7 @@ const domUpdates = {
 
   comparePlayerInputToAnswer() {
     game.checkLetters($('.guess-letter-input').val())
+    $('.guessed-letter-list').append(' ' ,$('.guess-letter-input').val())
   },
 
   guessedWrongLetter() {
