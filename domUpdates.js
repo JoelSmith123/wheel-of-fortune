@@ -113,7 +113,7 @@ function acceptNewPlayerName(player, playerIndex) {
 
 function changeButtonSubmitToStart() {
   submitPlayersButtonIcon.remove()
-  submitPlayersButton.addClass('start-game-button')
+  $('.submit-players-button').addClass('start-game-button')
   startGameButtonText.removeClass('display-mode-none')
 }
 
