@@ -32,11 +32,9 @@ const domUpdates = {
     $('.puzzle-category').text(category)
   },
 
-  spinWheel(event) {
-    wheel = new Wheel()
-    wheel.wheelSpin()
+  spinWheel() {
+    game.wheelSpin()
     $('.hidden-guess-section').addClass('spin-the-wheel')
-    $('.wheel-prize-display').text(wheel.currentValue)
   },
 
   appendGuessToDom(currentGuess, answerLettersArray) {
@@ -86,6 +84,7 @@ const domUpdates = {
   comparePlayerInputToAnswer() {
     game.checkLetters($('.guess-letter-input').val())
     $('.guessed-letter-list').append(' ' ,$('.guess-letter-input').val())
+    $('.hidden-guess-section').removeClass('spin-the-wheel')
   },
 
   guessedWrongLetter() {
@@ -98,6 +97,14 @@ const domUpdates = {
   updatedPlayerIndication(index) {
     $(`.player${index - 1}-score-container`).removeClass('background-change')
     $(`.player${index}-score-container`).addClass('background-change')
+  },
+
+  displayPlayersRoundScoresOnGame(playerIndex) {
+    $(`.player${playerIndex + 1}-score`).text(game.players[playerIndex].roundScore)
+  },
+
+  displayWheelPrize(wheelPrize) {
+    $('.wheel-prize-display').text(wheelPrize)
   }
 
 
@@ -108,7 +115,6 @@ function acceptNewPlayerName(player, playerIndex) {
   playersNamesArr.push(playerNameInput.val())
   game.players[playerIndex].name = playerNameInput.val()
   displayPlayersNamesOnGame(playerIndex)
-  displayPlayersScoresOnGame(playerIndex)
   playerNameInput.val('')
 }
 
@@ -124,15 +130,10 @@ function changeGameDisplay() {
   mainGameDisplay.removeClass('display-mode-none')
 }
 
-
-
 function displayPlayersNamesOnGame(playerIndex) {
    $(`.player${playerIndex + 1}-name-game-display`).text(playerNameInput.val())
 }
 
-function displayPlayersScoresOnGame(playerIndex) {
-  $(`.player${playerIndex + 1}-score`).text(game.players[playerIndex].totalScore)
-}
 
 if (typeof module !== 'undefined') {
   module.exports = domUpdates;
