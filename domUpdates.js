@@ -34,7 +34,6 @@ const domUpdates = {
 
   changeTile(column) {
   var thisDiv = document.querySelector(`.tile-${column}`);
-  console.log(thisDiv);
   thisDiv.classList.remove('green-tile')
   thisDiv.classList.add("white-tile")
   },
@@ -46,7 +45,7 @@ const domUpdates = {
 
   appendGuessToDom(currentGuess, answerLettersArray) {
     if (answerLettersArray.length < 15) {
-      let column = 0
+      let column = 14
       let stringedArray = answerLettersArray.split('')
       stringedArray.forEach((letter) => {
         if(letter === currentGuess) {
@@ -109,6 +108,7 @@ const domUpdates = {
   },
 
   changePlayer() {
+    $('.hidden-guess-section').removeClass('spin-the-wheel')
     $('.hidden-guess-section').addClass('display-mode-none')
     $('.next-player-turn-pop-up').removeClass('display-mode-none')
     $('.next-player-turn-pop-up').addClass('spin-the-wheel')
@@ -119,8 +119,8 @@ const domUpdates = {
     $('.next-player-turn-pop-up').removeClass('spin-the-wheel')
   },
 
-  updatedPlayerIndication(index) {
-    $(`.player${index - 1}-score-container`).removeClass('background-change')
+  updatedPlayerIndication(index, previousIndex) {
+    $(`.player${previousIndex}-score-container`).removeClass('background-change')
     $(`.player${index}-score-container`).addClass('background-change')
   },
 
