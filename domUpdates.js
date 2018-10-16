@@ -32,6 +32,13 @@ const domUpdates = {
     $('.puzzle-category').text(category)
   },
 
+  changeTile(column) {
+  var thisDiv = document.querySelector(`.tile-${column}`);
+  console.log(thisDiv);
+  thisDiv.classList.remove('green-tile')
+  thisDiv.classList.add("white-tile")
+  },
+
   spinWheel() {
     game.wheelSpin()
     $('.hidden-guess-section').addClass('spin-the-wheel')

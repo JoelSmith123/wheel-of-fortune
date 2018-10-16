@@ -95,6 +95,10 @@
   grid-template-rows: 2fr 5fr 1fr;
 }
 
+.white-tile {
+  background: white;
+}
+
 .player-scores-container {
   grid-area: player-scores;
   display: block;
