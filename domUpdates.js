@@ -89,6 +89,7 @@ const domUpdates = {
 
   comparePlayerInputToAnswer() {
     game.checkLetters($('.guess-letter-input').val())
+    game.checkForNewRound()
     $('.guessed-letter-list').append(' ' ,$('.guess-letter-input').val())
     $('.hidden-guess-section').removeClass('spin-the-wheel')
   },
@@ -128,8 +129,8 @@ const domUpdates = {
     $('.next-player-btn').removeClass('display-mode-none')
   },
 
-  updatedPlayerIndication(index) {
-    $(`.player${index - 1}-score-container`).removeClass('background-change')
+  updatedPlayerIndication(index, previousIndex) {
+    $(`.player${previousIndex}-score-container`).removeClass('background-change')
     $(`.player${index}-score-container`).addClass('background-change')
   },
 
