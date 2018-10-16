@@ -87,18 +87,29 @@ const domUpdates = {
     $('.hidden-guess-section').removeClass('spin-the-wheel')
   },
 
-  guessedWrongLetter() {
-    $('.guessed-wrong-letter-message').removeClass('display-mode-none')
-    $('.guess-letter-input').addClass('display-mode-none')
-    $('.guess-letter-btn-text').addClass('display-mode-none')
-    $('.guess-letter-btn').addClass('display-mode-none')
-    $('.next-player-btn').removeClass('display-mode-none')
-  },
+  // guessedWrongLetter() {
+  //   $('.guessed-wrong-letter-message').removeClass('display-mode-none')
+  //   $('.guess-letter-input').addClass('display-mode-none')
+  //   $('.guess-letter-btn-text').addClass('display-mode-none')
+  //   $('.guess-letter-btn').addClass('display-mode-none')
+  //   $('.next-player-btn').removeClass('display-mode-none')
+  // },
 
   toggleGuessAndNextPlayerButtons() {
     $('.guess-letter-input').addClass('display-mode-none')
     $('.next-player-btn').removeClass('display-mode-none')
     $('.guess-letter-btn').addClass('display-mode-none')
+  },
+
+  changePlayer() {
+    $('.hidden-guess-section').addClass('display-mode-none')
+    $('.next-player-turn-pop-up').removeClass('display-mode-none')
+    $('.next-player-turn-pop-up').addClass('spin-the-wheel')
+  },
+
+  showPlayerOptions() {
+    $('.next-player-turn-pop-up').addClass('display-mode-none')
+    $('.next-player-turn-pop-up').removeClass('spin-the-wheel')
   },
 
   updatedPlayerIndication(index) {
