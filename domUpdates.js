@@ -32,6 +32,12 @@ const domUpdates = {
     $('.puzzle-category').text(category)
   },
 
+  changeTile(column) {
+  var thisDiv = document.querySelector(`.tile-${column}`);
+  thisDiv.classList.remove('green-tile')
+  thisDiv.classList.add("white-tile")
+  },
+
   spinWheel() {
     game.wheelSpin()
     $('.hidden-guess-section').addClass('spin-the-wheel')
@@ -39,7 +45,7 @@ const domUpdates = {
 
   appendGuessToDom(currentGuess, answerLettersArray) {
     if (answerLettersArray.length < 15) {
-      let column = 0
+      let column = 14
       let stringedArray = answerLettersArray.split('')
       stringedArray.forEach((letter) => {
         if(letter === currentGuess) {
@@ -87,13 +93,36 @@ const domUpdates = {
     $('.hidden-guess-section').removeClass('spin-the-wheel')
   },
 
-  guessedWrongLetter() {
-    $('.guessed-wrong-letter-message').removeClass('display-mode-none')
+  // guessedWrongLetter() {
+  //   $('.guessed-wrong-letter-message').removeClass('display-mode-none')
+  //   $('.guess-letter-input').addClass('display-mode-none')
+  //   $('.guess-letter-btn-text').addClass('display-mode-none')
+  //   $('.guess-letter-btn').addClass('display-mode-none')
+  //   $('.next-player-btn').removeClass('display-mode-none')
+  // },
+
+  toggleGuessAndNextPlayerButtons() {
     $('.guess-letter-input').addClass('display-mode-none')
-    $('.guess-letter-btn-text').addClass('display-mode-none')
-    $('.next-player-btn-text').removeClass('display-mode-none')
+    $('.next-player-btn').removeClass('display-mode-none')
+    $('.guess-letter-btn').addClass('display-mode-none')
   },
 
+  changePlayer() {
+    $('.hidden-guess-section').removeClass('spin-the-wheel')
+    $('.hidden-guess-section').addClass('display-mode-none')
+    $('.next-player-turn-pop-up').removeClass('display-mode-none')
+    $('.next-player-turn-pop-up').addClass('spin-the-wheel')
+  },
+
+  showPlayerOptions() {
+    $('.next-player-turn-pop-up').addClass('display-mode-none')
+    $('.next-player-turn-pop-up').removeClass('spin-the-wheel')
+  },
+
+  updatedPlayerIndication(index, previousIndex) {
+    $(`.player${previousIndex}-score-container`).removeClass('background-change')
+  },
+  
   toggleSubmitBtn() {
     $('.guess-letter-btn').addClass('display-mode-none')
     $('.next-player-btn').removeClass('display-mode-none')

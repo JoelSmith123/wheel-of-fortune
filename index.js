@@ -8,4 +8,6 @@ $('.submit-players-button').on('click', domUpdates.submitPlayersName)
 $('.spin-wheel').on('click', domUpdates.spinWheel)
 
 $('.guess-letter-btn').on('click', domUpdates.comparePlayerInputToAnswer)
+$('.next-player-btn').on('click', domUpdates.changePlayer)
+$('.next-player-btn').on('click', domUpdates.showPlayerOptions)
 
