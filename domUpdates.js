@@ -94,6 +94,11 @@ const domUpdates = {
     $('.next-player-btn-text').removeClass('display-mode-none')
   },
 
+  toggleSubmitBtn() {
+    $('.guess-letter-btn').addClass('display-mode-none')
+    $('.next-player-btn').removeClass('display-mode-none')
+  },
+
   updatedPlayerIndication(index) {
     $(`.player${index - 1}-score-container`).removeClass('background-change')
     $(`.player${index}-score-container`).addClass('background-change')
