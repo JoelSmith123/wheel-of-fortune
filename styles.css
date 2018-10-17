@@ -162,6 +162,12 @@ body {
 
 .puzzle-grid-square {
   border: 2px solid black;
+  font-size: 70px;
+  font-family: 'fortune';
+  font-weight: lighter;
+  text-transform: lowercase;
+  padding-left: 5px;
+  padding-top: 5px;
   position: relative;
 }
 
