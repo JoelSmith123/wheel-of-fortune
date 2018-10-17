@@ -1,4 +1,3 @@
-const playerNameInput = $('.player-name-input')
 const player1NameDisplay = $('.welcome-page-player1-name')
 const player2NameDisplay = $('.welcome-page-player2-name')
 const player3NameDisplay = $('.welcome-page-player3-name')
@@ -10,7 +9,7 @@ let game
 let wheel
 
 const domUpdates = {
-  
+
   submitPlayersName(e) {
     e.preventDefault()
 
@@ -49,8 +48,8 @@ const domUpdates = {
   },
 
   comparePlayerInputToAnswer() {
-    game.checkLetters($('.guess-letter-input').val())
-    $('.guessed-letter-list').append(' ' , $('.guess-letter-input').val())
+    game.checkLetters($('.guess-letter-input').val().toUpperCase())
+    $('.guessed-letter-list').append(' ' , $('.guess-letter-input').val().toUpperCase())
     $('.hidden-guess-section').removeClass('spin-the-wheel')
     game.checkForNewRound()
   },
@@ -78,6 +77,8 @@ const domUpdates = {
     $('.hidden-guess-section').addClass('display-mode-none')
     $('.next-player-turn-pop-up').removeClass('display-mode-none')
     $('.next-player-turn-pop-up').addClass('spin-the-wheel')
+    $('.purchase-vowel-pop-up').removeClass('spin-the-wheel')
+    $('.purchase-vowel-pop-up').addClass('display-mode-none')
   },
 
   displaySolveThePuzzle() {
@@ -130,17 +131,34 @@ const domUpdates = {
 
   displayWheelPrize(wheelPrize) {
     $('.wheel-prize-display').text(wheelPrize)
-  }
+  },
 
+  purchaseVowelDisplayChange() {
+    $('.purchase-vowel-pop-up').removeClass('display-mode-none')
+    $('.purchase-vowel-pop-up').addClass('spin-the-wheel')
+  },
+
+  checkPurchasedVowel() {
+    game.purchaseVowel($('.guessed-vowel').val().toUpperCase())
+  },
+
+  guessedVowelIsNotAVowelMessage() {
+    $('.not-a-vowel-message').removeClass('display-mode-none')      
+  },
+
+  checkIfGuessedLetterIsVowel() {
+    $('.is-a-vowel-message').removeClass('display-mode-none')
+  }
 
 }
 
+
 function acceptNewPlayerName(player, playerIndex) {
-  player.text(playerNameInput.val())
-  playersNamesArr.push(playerNameInput.val())
-  game.players[playerIndex].name = playerNameInput.val()
+  player.text($('.player-name-input').val())
+  playersNamesArr.push($('.player-name-input').val())
+  game.players[playerIndex].name = $('.player-name-input').val()
   displayPlayersNamesOnGame(playerIndex)
-  playerNameInput.val('')
+  $('.player-name-input').val('')
 }
 
 function changeButtonSubmitToStart() {
@@ -156,7 +174,7 @@ function changeGameDisplay() {
 }
 
 function displayPlayersNamesOnGame(playerIndex) {
-   $(`.player${playerIndex + 1}-name-game-display`).text(playerNameInput.val())
+   $(`.player${playerIndex + 1}-name-game-display`).text($('.player-name-input').val())
 }
 
 

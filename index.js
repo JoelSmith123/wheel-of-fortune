@@ -1,17 +1,18 @@
 const welcomePage = $('.welcome-page')
 const mainGameDisplay = $('.main-game-display')
 
-playerNameInput.attr('autocomplete', 'off')
+$('.player-name-input').attr('autocomplete', 'off')
+
 $('.submit-players-button').remove('start-game-button-text')
 
 $('.submit-players-button').on('click', domUpdates.submitPlayersName)
 $('.spin-wheel').on('click', domUpdates.spinWheel)
-
 $('.guess-letter-btn').on('click', domUpdates.comparePlayerInputToAnswer)
-$('.next-player-btn').on('click', domUpdates.changePlayer)
+$('.purchase-vowel').on('click', domUpdates.purchaseVowelDisplayChange)
+$('.purchase-vowel-btn').on('click', domUpdates.checkPurchasedVowel)
+$('.next-player-btn').on('click', domUpdates.changePlayer, domUpdates.showPlayerOptions)
 $('.next-player-btn').on('click', domUpdates.showPlayerOptions)
 $('.solve-puzzle-option-btn').on('click', domUpdates.displaySolveThePuzzle)
 $('.submit-solve-puzzle-guess').on('click', domUpdates.solveThePuzzle)
 $('.change-round-btn').on('click', domUpdates.displaySolvedThePuzzle)
 $('.incorrect-solve-next-player-btn').on('click', domUpdates.displayIncorrectSolve)
-
