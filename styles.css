@@ -16,6 +16,7 @@
 body {
   background-image: url("images/game-background.jpg");
   opacity: .9;
+  background-size: cover;
 }
 
 .display-mode-none {
@@ -95,9 +96,10 @@ body {
   display: grid;
   grid-template-areas: "player-scores game-wheel"
                        "game-board game-wheel"
-                       "button-section game-wheel";
+                       "puzzle-category game-wheel"
+                       "button-section button-section";
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 2fr 5fr 1fr;
+  grid-template-rows: 2fr 350px 30px 1fr;
 }
 
 .white-tile {
@@ -106,7 +108,8 @@ body {
 
 .player-scores-container {
   grid-area: player-scores;
-  display: block;
+  display: flex;
+  flex-direction: row;
   margin: auto;
 }
 
@@ -117,9 +120,33 @@ body {
   height: 125px;
   width: 200px;
   margin: 20px;
-  background: #3700DC;
+  background: #ADD8E6;
   border: 2px solid white;
   border-radius: 10px;
+}
+
+.player-name {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  text-shadow: 0px 3px 0px #b2a98f,
+                 0px 5px 10px rgba(0,0,0,0.15),
+                 0px 5px 2px rgba(0,0,0,0.1),
+                 0px 5px 30px rgba(0,0,0,0.1);
+  margin: 5px 0 0 0;
+}
+
+.player-score-container {
+  text-align: center;
+}
+
+.player-score {
+  font-size: 18px;
+  text-align: left;
+  margin-left: 5px;
+  text-shadow: 0px 3px 0px #b2a98f,
+               0px 5px 10px rgba(0,0,0,0.15),
+               0px 5px 2px rgba(0,0,0,0.1),
+               0px 5px 30px rgba(0,0,0,0.1);
 }
 
 .puzzle-grid-container {
@@ -128,7 +155,9 @@ body {
   display: grid;
   grid-template-rows: repeat(5, 70px);
   grid-template-columns: repeat(16, 60px);
+  max-height: 370px;
   width: 840px;
+  margin-left: 50px;
 }
 
 .puzzle-grid-square {
@@ -137,37 +166,37 @@ body {
 }
 
 .top-tile {
-  box-shadow: 0px -9px 0px 0px #00BCFD;
+  box-shadow: 0px -9px 0px 0px #ADD8E6;
   border-top: 4px solid black;
 }
 
 .bottom-tile {
   border-bottom: 4px solid black;
-  box-shadow: 0px 9px 0px 0px #00BCFD;
+  box-shadow: 0px 9px 0px 0px #ADD8E6;
 }
 
 .top-left-tile {
   border-top: 4px solid black;
   border-left: 4px solid black;  
-  box-shadow: 0px -9px 0px 0px #00BCFD,
-              -9px 0px 0px 0px #00BCFD,
-              -9px -9px 0px 0px #00BCFD;
+  box-shadow: 0px -9px 0px 0px #ADD8E6,
+              -9px 0px 0px 0px #ADD8E6,
+              -9px -9px 0px 0px #ADD8E6;
 }
 
 .top-right-tile {
   border-top: 4px solid black;
   border-right: 4px solid black;
-  box-shadow: 0px -9px 0px 0px #00BCFD,
-              9px 0px 0px 0px #00BCFD,
-              9px -9px 0px 0px #00BCFD;
+  box-shadow: 0px -9px 0px 0px #ADD8E6,
+              9px 0px 0px 0px #ADD8E6,
+              9px -9px 0px 0px #ADD8E6;
 }
 
 .bottom-left-tile {
   border-bottom: 4px solid black;
   border-left: 4px solid black;
-  box-shadow: 0px 9px 0px 0px #00BCFD,
-              -9px 0px 0px 0px #00BCFD,
-              -9px 9px 0px 0px #00BCFD;
+  box-shadow: 0px 9px 0px 0px #ADD8E6,
+              -9px 0px 0px 0px #ADD8E6,
+              -9px 9px 0px 0px #ADD8E6;
 }
 
 .green-tile {
@@ -177,9 +206,9 @@ body {
 .bottom-right-tile {
   border-bottom: 4px solid black;
   border-right: 4px solid black;  
-  box-shadow: 0px 9px 0px 0px #00BCFD,
-              9px 0px 0px 0px #00BCFD,
-              9px 9px 0px 0px #00BCFD;
+  box-shadow: 0px 9px 0px 0px #ADD8E6,
+              9px 0px 0px 0px #ADD8E6,
+              9px 9px 0px 0px #ADD8E6;
 }
 
 .puzzle-grid-square-top-left,
@@ -189,10 +218,14 @@ body {
   border: none;
 }
 
+.puzzlecategory-section {
+  grid-area: puzzle-category;
+}
+
 .puzzle-category {
   font-family: 'fortune';
   font-weight: lighter;
-  grid-column: 1 / 15;
+/*  grid-column: 1 / 15;*/
   text-align: center;
 }
 
