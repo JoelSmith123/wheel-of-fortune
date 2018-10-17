@@ -116,6 +116,10 @@ const domUpdates = {
     $(`.player${playerIndex + 1}-score`).text(game.players[playerIndex].roundScore)
   },
 
+  displayPlayersGrandTotalScores(playerIndex) {
+    $(`.player${playerIndex + 1}-grand-score`).text(game.players[playerIndex].totalScore)
+  },
+
   displayWheelPrize(wheelPrize) {
     $('.wheel-prize-display').text(wheelPrize)
   }
