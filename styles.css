@@ -223,7 +223,7 @@ body {
 }
 
 .puzzle-category {
-  color: #fff;
+  color: #000;
   font-family: 'fortune';
   font-weight: lighter;
 /*  grid-column: 1 / 15;*/
@@ -411,11 +411,18 @@ body {
   position: relative;
 }
 
-.guessed-letter-list {
-  color: #fff;
+.guessed-letter-container {
+  display: block;
+}
+
+.guessed-letter-list, 
+.guessed-letter-list-indicator {
+  display: inline-block;
+  color: #000;
   font-family: 'fortune';
   font-weight: lighter;
 }
+
 
 .hidden-guess-section {
   display: none;
