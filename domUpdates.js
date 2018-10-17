@@ -43,48 +43,9 @@ const domUpdates = {
     $('.hidden-guess-section').addClass('spin-the-wheel')
   },
 
-  appendGuessToDom(currentGuess, answerLettersArray) {
-    if (answerLettersArray.length < 15) {
-      let column = 14
-      let stringedArray = answerLettersArray.split('')
-      stringedArray.forEach((letter) => {
-        if(letter === currentGuess) {
-          var thisDiv = document.querySelector(`.tile-${column}`);
-          thisDiv.innerText = currentGuess;
-        }
-        column += 1
-      })
-    } else {
-     let column = 0
-     let columnOne = 0
-     let wordArray = answerLettersArray.split(' ');
-     wordArray.forEach((word) => {
-       column += word.length
-       if (column < 15) {
-         let newArray = word.split('')
-         newArray.forEach((letter) => {
-          if(letter === currentGuess) {
-            var thisDiv = document.querySelector(`.tile-${columnOne}`);
-            thisDiv.innerText = currentGuess;
-          }
-          columnOne += 1
-        })
-        columnOne += 1
-
-       } else {
-         column = 14
-         let newArray = word.split('')
-         newArray.forEach((letter) => {
-           if(letter === currentGuess) {
-            var thisDiv = document.querySelector(`.tile-${column}`);
-            thisDiv.innerText = currentGuess;
-          }
-          column += 1
-        })
-       }
-     })
-   }
-
+  appendLetter(column, currentGuess) {
+    var thisDiv = document.querySelector(`.tile-${column}`);
+    thisDiv.innerText = currentGuess
   },
 
   comparePlayerInputToAnswer() {
