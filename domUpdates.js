@@ -85,9 +85,11 @@ const domUpdates = {
     $('.solve-the-puzzle-section').addClass('spin-the-wheel')
   },
 
-  removeClassSolveThePuzzle() {
+  solveThePuzzle() {
     $('.solve-the-puzzle-section').removeClass('spin-the-wheel')
     $('.solve-the-puzzle-section').addClass('display-mode-none')
+    let solvePuzzleGuess = $('.solve-puzzle-input').val()
+    game.checkSolvePuzzleAnswer(solvePuzzleGuess)
   },
 
   showPlayerOptions() {
