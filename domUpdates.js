@@ -33,9 +33,9 @@ const domUpdates = {
   },
 
   changeTile(column) {
-  var thisDiv = document.querySelector(`.tile-${column}`);
-  thisDiv.classList.remove('green-tile')
-  thisDiv.classList.add("white-tile")
+    var thisDiv = document.querySelector(`.tile-${column}`);
+    thisDiv.classList.remove('green-tile')
+    thisDiv.classList.add("white-tile")
   },
 
   spinWheel() {
@@ -89,18 +89,22 @@ const domUpdates = {
 
   comparePlayerInputToAnswer() {
     game.checkLetters($('.guess-letter-input').val())
-    game.checkForNewRound()
-    $('.guessed-letter-list').append(' ' ,$('.guess-letter-input').val())
+    $('.guessed-letter-list').append(' ' , $('.guess-letter-input').val())
     $('.hidden-guess-section').removeClass('spin-the-wheel')
+    game.checkForNewRound()
   },
 
-  // guessedWrongLetter() {
-  //   $('.guessed-wrong-letter-message').removeClass('display-mode-none')
-  //   $('.guess-letter-input').addClass('display-mode-none')
-  //   $('.guess-letter-btn-text').addClass('display-mode-none')
-  //   $('.guess-letter-btn').addClass('display-mode-none')
-  //   $('.next-player-btn').removeClass('display-mode-none')
-  // },
+  resetGreenTiles() {
+    let allBoardTilesArr = $('.puzzle-grid-square')
+
+    $('.guessed-letter-list').text(' ')
+
+    allBoardTilesArr.map(tile => {
+      $(allBoardTilesArr[tile]).text(' ')
+      $(allBoardTilesArr[tile]).removeClass('white-tile')
+      $(allBoardTilesArr[tile]).addClass('green-tile')
+    })
+  },
 
   toggleGuessAndNextPlayerButtons() {
     $('.guess-letter-input').addClass('display-mode-none')
@@ -120,18 +124,19 @@ const domUpdates = {
     $('.next-player-turn-pop-up').removeClass('spin-the-wheel')
   },
 
-  updatedPlayerIndication(index, previousIndex) {
-    $(`.player${previousIndex}-score-container`).removeClass('background-change')
+  updatedPlayerIndication(index) {
+    let playerScoreContainers = $(`.player-score-container`)
+    console.log(playerScoreContainers, 2)
+    playerScoreContainers.map(container => {
+      $(playerScoreContainers[container]).removeClass('background-change')
+    })
+
+    $(`.player${index}-score-container`).addClass('background-change')
   },
   
   toggleSubmitBtn() {
     $('.guess-letter-btn').addClass('display-mode-none')
     $('.next-player-btn').removeClass('display-mode-none')
-  },
-
-  updatedPlayerIndication(index, previousIndex) {
-    $(`.player${previousIndex}-score-container`).removeClass('background-change')
-    $(`.player${index}-score-container`).addClass('background-change')
   },
 
   displayPlayersRoundScoresOnGame(playerIndex) {
