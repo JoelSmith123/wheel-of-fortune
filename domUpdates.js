@@ -130,7 +130,7 @@ const domUpdates = {
   },
 
   displayWheelPrize(wheelPrize) {
-    $('.wheel-prize-display').text(wheelPrize)
+    $('.wheel-prize-display').text(`$${wheelPrize}`)
   },
 
   purchaseVowelDisplayChange() {
