@@ -99,11 +99,9 @@ const domUpdates = {
 
   updatedPlayerIndication(index) {
     let playerScoreContainers = $(`.player-score-container`)
-    console.log(playerScoreContainers, 2)
     playerScoreContainers.map(container => {
       $(playerScoreContainers[container]).removeClass('background-change')
     })
-
     $(`.player${index}-score-container`).addClass('background-change')
   },
   
