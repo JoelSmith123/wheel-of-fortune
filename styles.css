@@ -163,6 +163,10 @@ body {
 .puzzle-grid-square {
   border: 2px solid black;
   position: relative;
+  font-family: 'fortune';
+  font-size: 50px;
+  padding-top: 12px;
+  text-align: center;
 }
 
 .top-tile {
