@@ -80,6 +80,18 @@ const domUpdates = {
     $('.next-player-turn-pop-up').addClass('spin-the-wheel')
   },
 
+  displaySolveThePuzzle() {
+    $('.solve-the-puzzle-section').removeClass('display-mode-none')
+    $('.solve-the-puzzle-section').addClass('spin-the-wheel')
+  },
+
+  solveThePuzzle() {
+    $('.solve-the-puzzle-section').removeClass('spin-the-wheel')
+    $('.solve-the-puzzle-section').addClass('display-mode-none')
+    let solvePuzzleGuess = $('.solve-puzzle-input').val()
+    game.checkSolvePuzzleAnswer(solvePuzzleGuess)
+  },
+
   showPlayerOptions() {
     $('.next-player-turn-pop-up').addClass('display-mode-none')
     $('.next-player-turn-pop-up').removeClass('spin-the-wheel')
@@ -87,11 +99,9 @@ const domUpdates = {
 
   updatedPlayerIndication(index) {
     let playerScoreContainers = $(`.player-score-container`)
-    console.log(playerScoreContainers, 2)
     playerScoreContainers.map(container => {
       $(playerScoreContainers[container]).removeClass('background-change')
     })
-
     $(`.player${index}-score-container`).addClass('background-change')
   },
   
@@ -100,8 +110,22 @@ const domUpdates = {
     $('.next-player-btn').removeClass('display-mode-none')
   },
 
+  displaySolvedThePuzzle() {
+    $('.solved-the-puzzle').toggleClass('display-mode-none')
+    $('.solved-the-puzzle').toggleClass('spin-the-wheel')
+  },
+
+  displayIncorrectSolve() {
+    $('.incorrect-solve-section').toggleClass('display-mode-none')
+    $('.incorrect-solve-section').toggleClass('spin-the-wheel')
+  },
+
   displayPlayersRoundScoresOnGame(playerIndex) {
     $(`.player${playerIndex + 1}-score`).text(game.players[playerIndex].roundScore)
+  },
+
+  displayPlayersGrandTotalScores(playerIndex) {
+    $(`.player${playerIndex + 1}-grand-score`).text(game.players[playerIndex].totalScore)
   },
 
   displayWheelPrize(wheelPrize) {
