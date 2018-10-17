@@ -96,9 +96,10 @@ body {
   display: grid;
   grid-template-areas: "player-scores game-wheel"
                        "game-board game-wheel"
-                       "button-section game-wheel";
+                       "puzzle-category game-wheel"
+                       "button-section button-section";
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 2fr 5fr 1fr;
+  grid-template-rows: 2fr 350px 30px 1fr;
 }
 
 .white-tile {
@@ -142,6 +143,10 @@ body {
   font-size: 18px;
   text-align: left;
   margin-left: 5px;
+  text-shadow: 0px 3px 0px #b2a98f,
+               0px 5px 10px rgba(0,0,0,0.15),
+               0px 5px 2px rgba(0,0,0,0.1),
+               0px 5px 30px rgba(0,0,0,0.1);
 }
 
 .puzzle-grid-container {
@@ -150,6 +155,7 @@ body {
   display: grid;
   grid-template-rows: repeat(5, 70px);
   grid-template-columns: repeat(16, 60px);
+  max-height: 370px;
   width: 840px;
   margin-left: 50px;
 }
@@ -212,10 +218,14 @@ body {
   border: none;
 }
 
+.puzzlecategory-section {
+  grid-area: puzzle-category;
+}
+
 .puzzle-category {
   font-family: 'fortune';
   font-weight: lighter;
-  grid-column: 1 / 15;
+/*  grid-column: 1 / 15;*/
   text-align: center;
 }
 
