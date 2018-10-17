@@ -121,11 +121,11 @@ const domUpdates = {
   },
 
   displayPlayersRoundScoresOnGame(playerIndex) {
-    $(`.player${playerIndex + 1}-score`).text(game.players[playerIndex].roundScore)
+    $(`.player${playerIndex + 1}-score`).text('Round Score:' + ' ' + '$' + game.players[playerIndex].roundScore)
   },
 
   displayPlayersGrandTotalScores(playerIndex) {
-    $(`.player${playerIndex + 1}-grand-score`).text(game.players[playerIndex].totalScore)
+    $(`.player${playerIndex + 1}-grand-score`).text('Total Score:' + ' ' + '$' + game.players[playerIndex].totalScore)
   },
 
   displayWheelPrize(wheelPrize) {
