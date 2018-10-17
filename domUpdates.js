@@ -142,6 +142,7 @@ const domUpdates = {
 
   checkPurchasedVowel() {
     game.purchaseVowel($('.guessed-vowel').val().toUpperCase())
+    $('.guessed-vowel').val('')
   },
 
   guessedVowelIsNotAVowelMessage() {
