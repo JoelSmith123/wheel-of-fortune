@@ -80,6 +80,16 @@ const domUpdates = {
     $('.next-player-turn-pop-up').addClass('spin-the-wheel')
   },
 
+  displaySolveThePuzzle() {
+    $('.solve-the-puzzle-section').removeClass('display-mode-none')
+    $('.solve-the-puzzle-section').addClass('spin-the-wheel')
+  },
+
+  removeClassSolveThePuzzle() {
+    $('.solve-the-puzzle-section').removeClass('spin-the-wheel')
+    $('.solve-the-puzzle-section').addClass('display-mode-none')
+  },
+
   showPlayerOptions() {
     $('.next-player-turn-pop-up').addClass('display-mode-none')
     $('.next-player-turn-pop-up').removeClass('spin-the-wheel')
