@@ -114,12 +114,11 @@ const domUpdates = {
   },
 
   checkPurchasedVowel() {
-    console.log($('.guessed-vowel').val().toUpperCase())
-    if ($('.guessed-vowel').val().toUpperCase().match(/[AEIOU]/)) {
-        game.purchaseVowel($('.guessed-vowel').val().toUpperCase())
-      } else {
-        $('.not-a-vowel-message').removeClass('display-mode-none')      
-    }
+    game.purchaseVowel($('.guessed-vowel').val().toUpperCase())
+  },
+
+  guessedVowelIsNotAVowelMessage() {
+    $('.not-a-vowel-message').removeClass('display-mode-none')      
   },
 
   checkIfGuessedLetterIsVowel() {
