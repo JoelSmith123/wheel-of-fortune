@@ -49,7 +49,8 @@ const domUpdates = {
 
   comparePlayerInputToAnswer() {
     game.checkLetters($('.guess-letter-input').val().toUpperCase())
-    $('.guessed-letter-list').append(' ' , $('.guess-letter-input').val().toUpperCase())
+    $('.guessed-letter-list').append(`Guessed Letter List: ${$('.guess-letter-input').val().toUpperCase()}`)
+    $('.guess-letter-input').val('')
     $('.hidden-guess-section').removeClass('spin-the-wheel')
     game.checkForNewRound()
   },
@@ -130,7 +131,7 @@ const domUpdates = {
   },
 
   displayWheelPrize(wheelPrize) {
-    $('.wheel-prize-display').text(wheelPrize)
+    $('.wheel-prize-display').text(`$${wheelPrize}`)
   },
 
   purchaseVowelDisplayChange() {
