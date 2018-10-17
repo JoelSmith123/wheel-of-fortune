@@ -112,6 +112,16 @@ const domUpdates = {
     $('.next-player-btn').removeClass('display-mode-none')
   },
 
+  displaySolvedThePuzzle() {
+    $('.solved-the-puzzle').toggleClass('display-mode-none')
+    $('.solved-the-puzzle').toggleClass('spin-the-wheel')
+  },
+
+  displayIncorrectSolve() {
+    $('.incorrect-solve-section').toggleClass('display-mode-none')
+    $('.incorrect-solve-section').toggleClass('spin-the-wheel')
+  },
+
   displayPlayersRoundScoresOnGame(playerIndex) {
     $(`.player${playerIndex + 1}-score`).text(game.players[playerIndex].roundScore)
   },
