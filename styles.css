@@ -190,6 +190,7 @@ body {
 }
 
 .puzzle-category {
+  color: #fff;
   font-family: 'fortune';
   font-weight: lighter;
   grid-column: 1 / 15;
@@ -378,6 +379,7 @@ body {
 }
 
 .guessed-letter-list {
+  color: #fff;
   font-family: 'fortune';
   font-weight: lighter;
 }
@@ -398,7 +400,7 @@ body {
   height: 100px;
   justify-content: center;
   position: absolute;
-  width: 50%;
+  width: 90%;
 }
 
 @keyframes slidein {
@@ -408,8 +410,8 @@ body {
   }
   
   to {
-    margin-right:50%;
-    width: 50%;
+    margin-right:90%;
+    width: 90%;
   }
 }
 
@@ -439,7 +441,6 @@ body {
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  padding: 11px 33px;
   text-shadow: 0px -1px 0px #5b6178;
   margin-left: 15px;
   margin-right: 20px;
