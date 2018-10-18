@@ -104,6 +104,8 @@ const domUpdates = {
     playerScoreContainers.map(container => {
       $(playerScoreContainers[container]).removeClass('background-change')
     })
+    $(`.player${index}-name-game-display`).addClass('pulsate')
+    $(`.player${index}-score-container`).addClass('pulsate')
     $(`.player${index}-score-container`).removeClass(`player${index}-background`)
     $(`.player${index}-score-container`).addClass('background-change')
     $(`.player${index - 1}-score-container`).addClass(`player${index - 1}-background`)
