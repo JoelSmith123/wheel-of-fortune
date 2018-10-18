@@ -9,6 +9,7 @@
 
   <div class='welcome-page'>
     <h1 class='welcome-page-title'>WHEEL OF FORTUNE</h1>
+    <h3 class="enter-player-names">Enter Player Names:</h3>
     <form class='player-name-submit-form'>
       <input class='player-name-input' type="text" name="playername">
       <button class='submit-players-button'><i class="far fa-check-circle"></i><h4 class='start-game-button-text display-mode-none'>START GAME</h4></button>
@@ -131,16 +132,16 @@
         <div class='sec-5 wheel-pie-piece'><h1 class='wheel-prize-text'>$600</h1></div>
         <div class='sec-6 wheel-pie-piece'><h1 class='wheel-prize-text'>$650</h1></div>
         <div class='sec-7 wheel-pie-piece'><h1 class='wheel-prize-text'>$500</h1></div>
-        <div class='sec-8 wheel-pie-piece'><h1 class='lose'><span class='lose-a-turn wheel-prize-text'>Lose a</span> Turn</h1></div>
+        <div class='sec-8 wheel-pie-piece'><h1 class='lose'>Lose a Turn</h1></div>
         <div class='sec-9 wheel-pie-piece'><h1 class='wheel-prize-text'>$700</h1></div>
         <div class='sec-10 wheel-pie-piece'><h1 class='wheel-prize-text'>$600</h1></div>
         <div class='sec-11 wheel-pie-piece'><h1 class='wheel-prize-text'>$550</h1></div>
         <div class='sec-12 wheel-pie-piece'><h1 class='wheel-prize-text'>$500</h1></div>
-        <div class='sec-13 wheel-pie-piece'><h1 class='bankrupt'>Bankrupt</h1></div>
+        <div class='sec-13 wheel-pie-piece'><h1 class='bankrupt wheel-prize-text'>Bankrupt</h1></div>
         <div class='sec-14 wheel-pie-piece'><h1 class='wheel-prize-text'>$600</h1></div>
         <div class='sec-15 wheel-pie-piece'><h1 class='wheel-prize-text'>$700</h1></div>
-        <div class='sec-16 wheel-pie-piece'><h1>$800</h1></div>
-        <div class='sec-17 wheel-pie-piece'><h1 class='lose'><span class='lose-a-turn wheel-prize-text'>Lose a</span> Turn</h1></div>
+        <div class='sec-16 wheel-pie-piece'><h1 class='wheel-prize-text'>$800</h1></div>
+        <div class='sec-17 wheel-pie-piece'><h1 class='wheel-prize-text lose'>Lose a Turn</h1></div>
         <div class='sec-18 wheel-pie-piece'><h1 class='wheel-prize-text'>$500</h1></div>
         <div class='sec-19 wheel-pie-piece'><h1 class='wheel-prize-text'>$650</h1></div>
         <div class='sec-20 wheel-pie-piece'><h1 class='wheel-prize-text'>$500</h1></div>
@@ -169,7 +170,7 @@
       <!-- Next player's turn pop-up -->
       <section class='next-player-turn-pop-up display-mode-none'>
         <button class='next-player-btn'>Next player's turn</button>
-        <h2 class='guessed-wrong-letter-message display-mode-none'>Letter not included</h2>
+        <h2 class='guessed-wrong-letter-message'>Letter not included</h2>
       </section>
       <!-- End of next player's turn pop-up -->
       <!-- Vowel purchase pop-up -->
@@ -179,7 +180,6 @@
         <h2 class='not-a-vowel-message display-mode-none'>Must enter a vowel</h2>
       </section>
       <!-- End of vowel purchase pop-up -->
-      <!-- End of player's turn pop-up -->
       <!-- Solve the puzzle -->
       <section class="solve-the-puzzle-section display-mode-none">
         <input type="text" class='solve-puzzle-input'>
@@ -198,10 +198,19 @@
         <button class="incorrect-solve-next-player-btn">Next Player</button>
       </section>
       <!-- End Incorrect Solve -->
+      <!-- Bankrupt or Lose a Turn -->
+      <section class='bankrupt-lose-a-turn display-mode-none'>
+        <button class='bankrupt-next-player-btn'>Next player's turn</button>
+        <h2 class='bankrupt-lose-a-turn-text'></h2>
+      </section>
+      <!-- End of bankrupt or lose a turn -->
       <button class='spin-wheel'>Spin the Wheel</button>
       <button class='purchase-vowel'>Buy a Vowel</button>
       <button class='solve-puzzle-option-btn'>Solve the Puzzle</button>
       <button class='quit-game'>QUIT GAME</button>
+    </section>
+    <section class="game-winner-display display-mode-none">
+      <h2 class='game-winner-name'></h2>
     </section>
   </div>
 
