@@ -13,6 +13,24 @@
     100% {opacity: 0.0;}
 }
 
+.pulsate {
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: 3; 
+    opacity: 1.0;
+}
+
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+
 body {
   background-image: url("images/game-background.jpg");
   opacity: .9;
@@ -113,6 +131,12 @@ body {
   margin: auto;
 }
 
+.player1-background, 
+.player2-background,
+.player3-background {
+  background: #ADD8E6;
+}
+
 .player1-score-container,
 .player2-score-container,
 .player3-score-container {
@@ -120,7 +144,6 @@ body {
   height: 125px;
   width: 200px;
   margin: 20px;
-  background: #ADD8E6;
   border: 2px solid white;
   border-radius: 10px;
 }

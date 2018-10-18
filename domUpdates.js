@@ -76,10 +76,10 @@ const domUpdates = {
   changePlayer() {
     $('.hidden-guess-section').removeClass('spin-the-wheel')
     $('.hidden-guess-section').addClass('display-mode-none')
-    $('.next-player-turn-pop-up').removeClass('display-mode-none')
-    $('.next-player-turn-pop-up').addClass('spin-the-wheel')
     $('.purchase-vowel-pop-up').removeClass('spin-the-wheel')
     $('.purchase-vowel-pop-up').addClass('display-mode-none')
+    $('.next-player-turn-pop-up').removeClass('display-mode-none')
+    $('.next-player-turn-pop-up').addClass('spin-the-wheel')
   },
 
   displaySolveThePuzzle() {
@@ -104,7 +104,20 @@ const domUpdates = {
     playerScoreContainers.map(container => {
       $(playerScoreContainers[container]).removeClass('background-change')
     })
+    $(`.player${index}-name-game-display`).addClass('pulsate')
+    $(`.player${index}-score-container`).addClass('pulsate')
+    $(`.player${index}-score-container`).removeClass(`player${index}-background`)
     $(`.player${index}-score-container`).addClass('background-change')
+    $(`.player${index - 1}-score-container`).addClass(`player${index - 1}-background`)
+  },
+
+  removeClassGuessSection() {
+    $('.hidden-guess-section').removeClass('spin-the-wheel')
+    $('.hidden-guess-section').addClass('display-mode-none')
+  },
+
+  addClassPlayerThree(index) {
+    $(`.player${index}-score-container`).addClass(`player${index}-background`)
   },
   
   toggleSubmitBtn() {
