@@ -61,6 +61,12 @@ body {
   height: 40px;
 }
 
+.enter-player-names {
+  margin-bottom: 2px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
 .player-name-input,
 .submit-players-button {
   box-sizing: border-box;
@@ -127,6 +133,10 @@ body {
   margin: auto;
   margin-bottom: 10px;
   margin-top: 0;
+}
+
+.background-change {
+  background: grey;
 }
 
 .player1-background, 

@@ -97,7 +97,9 @@ const domUpdates = {
   updatedPlayerIndication(index) {
     let playerScoreContainers = $(`.player-score-container`)
     playerScoreContainers.map(container => {
+      console.log(container)
       $(playerScoreContainers[container]).removeClass('background-change')
+      $(playerScoreContainers[container]).addClass(`player${container + 1}-background`)
     })
     $(`.player${index}-name-game-display`).addClass('pulsate')
     $(`.player${index}-score-container`).addClass('pulsate')
@@ -120,10 +122,11 @@ const domUpdates = {
     $(`.player${index}-score-container`).addClass(`player${index}-background`)
   },
 
-  displaySolvedThePuzzle() {
+  displaySolvedThePuzzle(name) {
     $('.solved-the-puzzle').toggleClass('display-mode-none')
     $('.solved-the-puzzle').toggleClass('spin-the-wheel')
     $('.solve-puzzle-input').val('')
+    $('.solved-the-puzzle-text').text('Congratulations ' + name + '! You solved the puzzle!')
   },
 
   displayIncorrectSolve() {
