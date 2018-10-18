@@ -49,7 +49,8 @@ const domUpdates = {
 
   comparePlayerInputToAnswer() {
     game.checkLetters($('.guess-letter-input').val().toUpperCase())
-    $('.guessed-letter-list').append(`Guessed Letter List: ${$('.guess-letter-input').val().toUpperCase()}`)
+    $('.guessed-letter-list-container').removeClass('display-mode-none')
+    $('.guessed-letter-list').append(' ' + $('.guess-letter-input').val().toUpperCase())
     $('.guess-letter-input').val('')
     $('.hidden-guess-section').removeClass('spin-the-wheel')
     game.checkForNewRound()
@@ -128,6 +129,7 @@ const domUpdates = {
   displaySolvedThePuzzle() {
     $('.solved-the-puzzle').toggleClass('display-mode-none')
     $('.solved-the-puzzle').toggleClass('spin-the-wheel')
+    $('.solve-puzzle-input').val('')
   },
 
   displayIncorrectSolve() {
@@ -154,6 +156,8 @@ const domUpdates = {
 
   checkPurchasedVowel() {
     game.purchaseVowel($('.guessed-vowel').val().toUpperCase())
+    $('.guessed-vowel').val('')
+    $('.spin-the-wheel').addClass('display-mode-none')
   },
 
   guessedVowelIsNotAVowelMessage() {

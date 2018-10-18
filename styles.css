@@ -41,10 +41,6 @@ body {
   display: none;
 }
 
-.background-change {
-  background-color: grey;
-}
-
 .welcome-page {
   text-align: center;
 }
@@ -117,7 +113,7 @@ body {
                        "puzzle-category game-wheel"
                        "button-section button-section";
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 2fr 350px 30px 1fr;
+  grid-template-rows: 180px 350px 30px 1fr;
 }
 
 .white-tile {
@@ -129,6 +125,8 @@ body {
   display: flex;
   flex-direction: row;
   margin: auto;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .player1-background, 
@@ -185,6 +183,12 @@ body {
 
 .puzzle-grid-square {
   border: 2px solid black;
+  font-size: 45px;
+  font-family: 'fortune';
+  font-weight: lighter;
+  text-transform: lowercase;
+  padding-left: 6px;
+  padding-top: 12px;
   position: relative;
 }
 
@@ -246,7 +250,7 @@ body {
 }
 
 .puzzle-category {
-  color: #fff;
+  color: #000;
   font-family: 'fortune';
   font-weight: lighter;
 /*  grid-column: 1 / 15;*/
@@ -434,14 +438,21 @@ body {
   position: relative;
 }
 
-.guessed-letter-list {
-  color: #fff;
+.guessed-letter-container {
+  display: block;
+}
+
+.guessed-letter-list, 
+.guessed-letter-list-indicator {
+  display: inline-block;
+  color: #000;
   font-family: 'fortune';
   font-weight: lighter;
 }
 
+
 .hidden-guess-section {
-  display: none;
+  display: none; 
 }
 
 .spin-the-wheel {
@@ -471,7 +482,8 @@ body {
   }
 }
 
-.guess-letter-input {
+.guess-letter-input,
+.solve-puzzle-input {
   height: 50px;
   background: none;
   border-bottom: 2px solid black;
@@ -485,9 +497,28 @@ body {
   width: 50px;
 }
 
+.solve-puzzle-input {
+  width: 50%;
+}
 
+.solved-the-puzzle-text {
+  font-family: 'fortune';
+}
+
+.spin-wheel {
+  margin-left: 200px !important;
+}
+
+.spin-wheel,
+.purchase-vowel,
+.solve-puzzle-option-btn,
+.quit-game, 
 .guess-letter-btn,
-.purchase-vowel-btn {
+.purchase-vowel-btn,
+.next-player-btn,
+.change-round-btn,
+.submit-solve-puzzle-guess,
+.incorrect-solve-next-player-btn {
   box-shadow: 0px 1px 0px 0px #f0f7fa;
   background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
   background-color: #33bdef;
@@ -500,7 +531,9 @@ body {
   text-shadow: 0px -1px 0px #5b6178;
   margin-left: 15px;
   margin-right: 20px;
+  padding: 15px;
 }
+
 
 .guess-letter-btn:hover {
   background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
@@ -512,8 +545,22 @@ body {
   top: 1px;
 }
 
-
-.wheel-prize-display {
-  
+.guess-letter-btn-text {
+  margin: 0;
 }
+
+.guessed-vowel {
+  height: 50px;
+  background: none;
+  border-bottom: 2px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  font-family: 'fortune';
+  font-size: 40px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  width: 50px;
+}
+
 
