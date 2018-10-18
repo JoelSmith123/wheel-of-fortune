@@ -8,6 +8,8 @@ correctly, its location is filled in on the board. When all the letters are gues
 
 [A link to our DTR gist](https://gist.github.com/kayleenovak/958a9a0321e624c0f27402baea4e50a1)
 
+## In-Game Screenshot
+![in-game screenshot](/images/wheel-of-fortune-screenshot.png)
 
 ## Wireframe
 
