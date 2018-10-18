@@ -164,6 +164,11 @@ const domUpdates = {
     $('.not-a-vowel-message').removeClass('display-mode-none')      
   },
 
+  displayGameWinner(player) {
+    $('.game-winner-display').addClass('spin-the-wheel')
+    $('.game-winner-name').text('Congratulations ' + player + ' you won the game!')
+  },
+
   checkIfGuessedLetterIsVowel() {
     $('.is-a-vowel-message').removeClass('display-mode-none')
   }
