@@ -5,17 +5,12 @@ Rewards are selected with a wheelspin, and the puzzle is displayed with each wor
 correctly, its location is filled in on the board. When all the letters are guessed, a new round begins with a new puzzle.
 
 
-
 [A link to our DTR gist](https://gist.github.com/kayleenovak/958a9a0321e624c0f27402baea4e50a1)
 
-## In-Game Screenshot
-![in-game screenshot](/images/wheel-of-fortune-screenshot.png)
 
-## Wireframe
+## Wireframes
 
-![image](https://i.postimg.cc/Hs6PJhfD/wireframe.jpg)
+https://gist.github.com/JoelSmith123/96949c05cc11f20e5f084964869f7546
 
-## User Flow
 
-![image](https://i.postimg.cc/d1J8jqyW/userflow.jpg)
 
