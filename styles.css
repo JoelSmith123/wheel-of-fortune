@@ -8,37 +8,32 @@
 }
 
 @-webkit-keyframes opacityPulse {
-    0% {opacity: 0.0;}
-    50% {opacity: 1.0;}
-    100% {opacity: 0.0;}
+  0% {opacity: 0.0;}
+  50% {opacity: 1.0;}
+  100% {opacity: 0.0;}
 }
 
 .pulsate {
-    -webkit-animation: pulsate 2s ease-out;
-    -webkit-animation-iteration-count: 3; 
-    opacity: 1.0;
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-iteration-count: 3; 
+  opacity: 1.0;
 }
 
 @-webkit-keyframes pulsate {
-    0% { 
-        opacity: 0.5;
-    }
-    50% { 
-        opacity: 1.0;
-    }
-    100% { 
-        opacity: 0.5;
-    }
+  0% { 
+      opacity: 0.5;
+  }
+  50% { 
+      opacity: 1.0;
+  }
+  100% { 
+      opacity: 0.5;
+  }
 }
 
 body {
   background-image: url("images/game-background.jpg");
-  opacity: .9;
   background-size: cover;
-}
-
-.display-mode-none {
-  display: none;
 }
 
 .welcome-page {
@@ -50,11 +45,8 @@ body {
   margin-top: 200px;
 }
 
-.welcome-page-player1-name,
-.welcome-page-player2-name,
-.welcome-page-player3-name {
-  font-family: 'fortune';
-  font-weight: lighter;
+.display-mode-none {
+  display: none;
 }
 
 .player-name-submit-form {
@@ -63,8 +55,8 @@ body {
 
 .player-name-input,
 .submit-players-button {
-  box-sizing: border-box;
   border: 2px solid #000;
+  box-sizing: border-box;
   height: 100%;
   vertical-align: middle;
 }
@@ -91,19 +83,26 @@ body {
 }
 
 .start-game-button-text {
- color: #fff;
- font-family: 'fortune';
- font-size: 12px;
- font-weight: lighter;
- margin-top: 6px;
- animation: opacityPulse 2s ease-out;
- animation-iteration-count: infinite;
- opacity: 1;
+  animation-iteration-count: infinite;
+  animation: opacityPulse 2s ease-out;
+  color: #fff;
+  font-family: 'fortune';
+  font-size: 12px;
+  font-weight: lighter;
+  margin-top: 6px;
+  opacity: 1;
 }
 
 .fa-check-circle {
   color: #fff;
   font-size: 20px;
+}
+
+.welcome-page-player1-name,
+.welcome-page-player2-name,
+.welcome-page-player3-name {
+  font-family: 'fortune';
+  font-weight: lighter;
 }
 
 .main-game-display-grid {
@@ -116,17 +115,24 @@ body {
   grid-template-rows: 180px 350px 30px 1fr;
 }
 
-.white-tile {
-  background: white;
-}
-
 .player-scores-container {
-  grid-area: player-scores;
   display: flex;
   flex-direction: row;
-  margin: auto;
+  grid-area: player-scores;
   margin-bottom: 10px;
   margin-top: 0;
+  margin: auto;
+}
+
+.player1-score-container,
+.player2-score-container,
+.player3-score-container {
+  border-radius: 10px;
+  border: 2px solid white;
+  display: inline-block;
+  height: 125px;
+  margin: 20px;
+  width: 200px;
 }
 
 .player1-background, 
@@ -135,71 +141,58 @@ body {
   background: #ADD8E6;
 }
 
-.player1-score-container,
-.player2-score-container,
-.player3-score-container {
-  display: inline-block;
-  height: 125px;
-  width: 200px;
-  margin: 20px;
-  border: 2px solid white;
-  border-radius: 10px;
+.player-score-container {
+  text-align: center;
 }
 
 .player-name {
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
+  margin: 5px 0 0 0;
   text-shadow: 0px 3px 0px #b2a98f,
                  0px 5px 10px rgba(0,0,0,0.15),
                  0px 5px 2px rgba(0,0,0,0.1),
                  0px 5px 30px rgba(0,0,0,0.1);
-  margin: 5px 0 0 0;
-}
-
-.player-score-container {
-  text-align: center;
 }
 
 .player-score {
   font-size: 18px;
-  text-align: left;
   margin-left: 5px;
+  text-align: left;
   text-shadow: 0px 3px 0px #b2a98f,
                0px 5px 10px rgba(0,0,0,0.15),
                0px 5px 2px rgba(0,0,0,0.1),
                0px 5px 30px rgba(0,0,0,0.1);
 }
 
+/*Start of Game Board*/
 .puzzle-grid-container {
-  grid-area: game-board;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: repeat(5, 70px);
+  grid-area: game-board;
   grid-template-columns: repeat(16, 60px);
+  grid-template-rows: repeat(5, 70px);
+  margin-left: 50px;
   max-height: 370px;
   width: 840px;
-  margin-left: 50px;
+}
+
+.puzzle-grid-square-top-left,
+.puzzle-grid-square-top-right,
+.puzzle-grid-square-bottom-left,
+.puzzle-grid-square-bottom-right {
+  border: none;
 }
 
 .puzzle-grid-square {
   border: 2px solid black;
-  font-size: 45px;
   font-family: 'fortune';
+  font-size: 45px;
   font-weight: lighter;
-  text-transform: lowercase;
   padding-left: 6px;
   padding-top: 12px;
   position: relative;
-}
-
-.top-tile {
-  box-shadow: 0px -9px 0px 0px #ADD8E6;
-  border-top: 4px solid black;
-}
-
-.bottom-tile {
-  border-bottom: 4px solid black;
-  box-shadow: 0px 9px 0px 0px #ADD8E6;
+  text-transform: lowercase;
 }
 
 .top-left-tile {
@@ -226,10 +219,6 @@ body {
               -9px 9px 0px 0px #ADD8E6;
 }
 
-.green-tile {
-  background-image: url("images/WheelOfFortune.png");
-}
-
 .bottom-right-tile {
   border-bottom: 4px solid black;
   border-right: 4px solid black;  
@@ -238,12 +227,24 @@ body {
               9px 9px 0px 0px #ADD8E6;
 }
 
-.puzzle-grid-square-top-left,
-.puzzle-grid-square-top-right,
-.puzzle-grid-square-bottom-left,
-.puzzle-grid-square-bottom-right {
-  border: none;
+.top-tile {
+  box-shadow: 0px -9px 0px 0px #ADD8E6;
+  border-top: 4px solid black;
 }
+
+.bottom-tile {
+  border-bottom: 4px solid black;
+  box-shadow: 0px 9px 0px 0px #ADD8E6;
+}
+
+.green-tile {
+  background-image: url("images/WheelOfFortune.png");
+}
+
+.white-tile {
+  background: white;
+}
+/*End of Game Board*/
 
 .puzzlecategory-section {
   grid-area: puzzle-category;
@@ -253,12 +254,10 @@ body {
   color: #000;
   font-family: 'fortune';
   font-weight: lighter;
-/*  grid-column: 1 / 15;*/
   text-align: center;
 }
 
 /*Start of game wheel styling*/
-
 .game-wheel {
   grid-area: game-wheel;
   height: 100%;
@@ -266,24 +265,22 @@ body {
 }
 
 .wheel-wrapper {
-  position: relative;
-  overflow: hidden;
   height: 100%;
+  overflow: hidden;
+  position: relative;
   width: 100%;
-
 }
 
 .wheel-pie-piece {
-  position: absolute;
-  width: 0; 
-  height: 0; 
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   border-top: 25px solid blue;
   border-width: 300px 40px 0;
-  transform-origin: 40px 299px;
+  height: 0; 
+  position: absolute;
   right: -40px;
-
+  transform-origin: 40px 299px;
+  width: 0; 
 }
 
 .bankrupt {
@@ -292,132 +289,17 @@ body {
   margin-left: -13px;
 }
 
-.sec-2 {
-  transform: rotate(15deg);
-  border-color: #FCFA00 transparent;
-}
-
-.sec-3 {
-  transform: rotate(30deg);
-  border-color: #FF0000 transparent;
-}
-
-.sec-4 {
-  transform: rotate(45deg);
-  border-color: #00BAFF transparent;
-}
-
-.sec-5 {
-  transform: rotate(60deg);
-  border-color: #FF5900 transparent;
-}
-
-.sec-6 {
-  transform: rotate(75deg);
-  border-color: #BC68DD transparent;
-}
-
-.sec-7 {
-  transform: rotate(90deg);
-  border-color: #FCFA00 transparent;
-}
-
-.sec-8 {
-  transform: rotate(105deg);
-  border-color: #FFFFFF transparent;
-}
-
-.sec-9 {
-  transform: rotate(120deg);
-  border-color: #FF0000 transparent;
-}
-
-.sec-10 {
-  transform: rotate(135deg);
-  border-color: #00BAFF transparent;
-}
-
-.sec-11 {
-  transform: rotate(150deg);
-  border-color: #00C27C transparent;
-}
-
-.sec-12 {
-  transform: rotate(165deg);
-  border-color: #FF919A transparent;
-}
-
-.sec-13 {
-  transform: rotate(180deg);
-  border-color: #000000 transparent;
-}
-
-.sec-14 {
-  transform: rotate(195deg);
-  border-color: #BC68DD transparent;
-}
-
-.sec-15 {
-  transform: rotate(210deg);
-  border-color: #00FFFF transparent;
-}
-
-.sec-16 {
-  transform: rotate(225deg);
-  border-color: #00BAFF transparent;
-}
-
-.sec-17 {
-  transform: rotate(240deg);
-  border-color: #FFFFFF transparent;
-}
-
-.sec-18 {
-  transform: rotate(255deg);
-  border-color: #FF0000 transparent;
-}
-
-.sec-19 {
-  transform: rotate(270deg);
-  border-color: #BC68DD transparent;
-}
-
-.sec-20 {
-  transform: rotate(285deg);
-  border-color: #FF919A transparent;
-}
-
-.sec-21 {
-  transform: rotate(300deg);
-  border-color: #00C27C transparent;
-}
-
-.sec-22 {
-  transform: rotate(315deg);
-  border-color: #FF5900 transparent;
-}
-
-.sec-23 {
-  transform: rotate(330deg);
-  border-color: #000000 transparent;
-}
-
-.sec-24 {
-  transform: rotate(345deg);
-  border-color: #00C27C transparent;
-}
-
 .wheel-prize-text {
-    margin-top: -275px;
-    color: black;
-    position: relative;
-    z-index: 10000000;
-    display: block;
-    text-align: center;
-    font-size: 36px;
-    margin-left: -21px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+  color: black;
+  display: block;
+  font-size: 36px;
+  margin-left: -21px;
+  margin-top: -275px;
+  position: relative;
+  text-align: center;
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+  z-index: 10000000;
 }
 
 .lose {
@@ -427,10 +309,124 @@ body {
 
 .lose-a-turn {
   font-size: 20px;
-  writing-mode: horizontal-tb;
   text-orientation: initial;
+  writing-mode: horizontal-tb;
 }
 
+.sec-2 {
+  border-color: #FCFA00 transparent;
+  transform: rotate(15deg);
+}
+
+.sec-3 {
+  border-color: #FF0000 transparent;
+  transform: rotate(30deg);
+}
+
+.sec-4 {
+  border-color: #00BAFF transparent;
+  transform: rotate(45deg);
+}
+
+.sec-5 {
+  border-color: #FF5900 transparent;
+  transform: rotate(60deg);
+}
+
+.sec-6 {
+  border-color: #BC68DD transparent;
+  transform: rotate(75deg);
+}
+
+.sec-7 {
+  border-color: #FCFA00 transparent;
+  transform: rotate(90deg);
+}
+
+.sec-8 {
+  border-color: #FFFFFF transparent;
+  transform: rotate(105deg);
+}
+
+.sec-9 {
+  border-color: #FF0000 transparent;
+  transform: rotate(120deg);
+}
+
+.sec-10 {
+  border-color: #00BAFF transparent;
+  transform: rotate(135deg);
+}
+
+.sec-11 {
+  border-color: #00C27C transparent;
+  transform: rotate(150deg);
+}
+
+.sec-12 {
+  border-color: #FF919A transparent;
+  transform: rotate(165deg);
+}
+
+.sec-13 {
+  border-color: #000000 transparent;
+  transform: rotate(180deg);
+}
+
+.sec-14 {
+  border-color: #BC68DD transparent;
+  transform: rotate(195deg);
+}
+
+.sec-15 {
+  border-color: #00FFFF transparent;
+  transform: rotate(210deg);
+}
+
+.sec-16 {
+  border-color: #00BAFF transparent;
+  transform: rotate(225deg);
+}
+
+.sec-17 {
+  border-color: #FFFFFF transparent;
+  transform: rotate(240deg);
+}
+
+.sec-18 {
+  border-color: #FF0000 transparent;
+  transform: rotate(255deg);
+}
+
+.sec-19 {
+  border-color: #BC68DD transparent;
+  transform: rotate(270deg);
+}
+
+.sec-20 {
+  border-color: #FF919A transparent;
+  transform: rotate(285deg);
+}
+
+.sec-21 {
+  border-color: #00C27C transparent;
+  transform: rotate(300deg);
+}
+
+.sec-22 {
+  border-color: #FF5900 transparent;
+  transform: rotate(315deg);
+}
+
+.sec-23 {
+  border-color: #000000 transparent;
+  transform: rotate(330deg);
+}
+
+.sec-24 {
+  border-color: #00C27C transparent;
+  transform: rotate(345deg);
+}
 /*End of game wheel styling*/
 
 .button-section {
@@ -444,12 +440,11 @@ body {
 
 .guessed-letter-list, 
 .guessed-letter-list-indicator {
-  display: inline-block;
   color: #000;
+  display: inline-block;
   font-family: 'fortune';
   font-weight: lighter;
 }
-
 
 .hidden-guess-section {
   display: none; 
@@ -457,10 +452,10 @@ body {
 
 .spin-the-wheel {
   align-items: center;
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: 1;
   animation-direction: left;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-name: slidein;
   background: #3700DC;
   border-radius: 10px;
   display: flex;
@@ -484,15 +479,15 @@ body {
 
 .guess-letter-input,
 .solve-puzzle-input {
-  height: 50px;
   background: none;
   border-bottom: 2px solid black;
   border-left: none;
-  border-top: none;
   border-right: none;
+  border-top: none;
   font-family: 'fortune';
   font-size: 40px;
   font-weight: lighter;
+  height: 50px;
   text-transform: uppercase;
   width: 50px;
 }
@@ -509,35 +504,34 @@ body {
   margin-left: 200px !important;
 }
 
-.spin-wheel,
-.purchase-vowel,
-.solve-puzzle-option-btn,
-.quit-game, 
-.guess-letter-btn,
-.purchase-vowel-btn,
-.next-player-btn,
 .change-round-btn,
+.guess-letter-btn,
+.next-player-btn,
+.purchase-vowel,
+.purchase-vowel-btn,
+.quit-game, 
+.solve-puzzle-option-btn,
+.spin-wheel,
 .submit-solve-puzzle-guess,
 .incorrect-solve-next-player-btn {
-  box-shadow: 0px 1px 0px 0px #f0f7fa;
-  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
   background-color: #33bdef;
+  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
   border-radius: 20px;
   border: 1px solid #057fd0;
-  cursor: pointer;
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
   color: #ffffff;
+  cursor: pointer;
   font-size: 15px;
   font-weight: bold;
-  text-shadow: 0px -1px 0px #5b6178;
   margin-left: 15px;
   margin-right: 20px;
   padding: 15px;
+  text-shadow: 0px -1px 0px #5b6178;
 }
 
-
 .guess-letter-btn:hover {
-  background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
   background-color: #019ad2;
+  background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
 }
 
 .guess-letter-btn: active {
@@ -550,15 +544,15 @@ body {
 }
 
 .guessed-vowel {
-  height: 50px;
   background: none;
   border-bottom: 2px solid black;
   border-left: none;
-  border-top: none;
   border-right: none;
+  border-top: none;
   font-family: 'fortune';
   font-size: 40px;
   font-weight: lighter;
+  height: 50px;
   text-transform: uppercase;
   width: 50px;
 }

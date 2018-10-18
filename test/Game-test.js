@@ -1,7 +1,9 @@
 const { expect } = require('Chai')
 const Game = require('../lib/Game')
 const Round = require('../lib/Round')
-const Data = require('../lib/data')
+const Data = require('../lib/Data.js')
+const spies = require('chai-spies')
+chai.use(spies);
 
 describe('Game', () => {
   var game

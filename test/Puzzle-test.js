@@ -1,6 +1,7 @@
 const { expect } = require('Chai')
 const Puzzle = require('../lib/Puzzle')
-const Data = require('../lib/data')
+const spies = require('chai-spies')
+chai.use(spies);
 
 describe.only('Puzzle', () => {
   var puzzle
