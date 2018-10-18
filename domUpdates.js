@@ -116,6 +116,7 @@ const domUpdates = {
   displaySolvedThePuzzle() {
     $('.solved-the-puzzle').toggleClass('display-mode-none')
     $('.solved-the-puzzle').toggleClass('spin-the-wheel')
+    $('.solve-puzzle-input').val('')
   },
 
   displayIncorrectSolve() {
@@ -143,6 +144,7 @@ const domUpdates = {
   checkPurchasedVowel() {
     game.purchaseVowel($('.guessed-vowel').val().toUpperCase())
     $('.guessed-vowel').val('')
+    $('.spin-the-wheel').addClass('display-mode-none')
   },
 
   guessedVowelIsNotAVowelMessage() {
