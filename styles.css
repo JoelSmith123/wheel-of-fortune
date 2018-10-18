@@ -24,7 +24,7 @@ body {
 }
 
 .background-change {
-  background-color: grey;
+  background: red !important;
 }
 
 .welcome-page {
@@ -164,12 +164,12 @@ body {
 
 .puzzle-grid-square {
   border: 2px solid black;
-  font-size: 70px;
+  font-size: 45px;
   font-family: 'fortune';
   font-weight: lighter;
   text-transform: lowercase;
-  padding-left: 5px;
-  padding-top: 5px;
+  padding-left: 6px;
+  padding-top: 12px;
   position: relative;
 }
 
@@ -463,7 +463,8 @@ body {
   }
 }
 
-.guess-letter-input {
+.guess-letter-input,
+.solve-puzzle-input {
   height: 50px;
   background: none;
   border-bottom: 2px solid black;
@@ -477,6 +478,14 @@ body {
   width: 50px;
 }
 
+.solve-puzzle-input {
+  width: 50%;
+}
+
+.solved-the-puzzle-text {
+  font-family: 'fortune';
+}
+
 .spin-wheel {
   margin-left: 200px !important;
 }
@@ -487,7 +496,9 @@ body {
 .quit-game, 
 .guess-letter-btn,
 .purchase-vowel-btn,
-.next-player-btn {
+.next-player-btn,
+.change-round-btn,
+.submit-solve-puzzle-guess {
   box-shadow: 0px 1px 0px 0px #f0f7fa;
   background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
   background-color: #33bdef;
