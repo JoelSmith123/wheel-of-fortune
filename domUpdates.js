@@ -39,7 +39,6 @@ const domUpdates = {
 
   spinWheel() {
     game.wheelSpin()
-    $('.hidden-guess-section').addClass('spin-the-wheel')
   },
 
   appendLetter(column, currentGuess) {
@@ -52,15 +51,12 @@ const domUpdates = {
     $('.guessed-letter-list-container').removeClass('display-mode-none')
     $('.guessed-letter-list').append(' ' + $('.guess-letter-input').val().toUpperCase())
     $('.guess-letter-input').val('')
-    $('.hidden-guess-section').removeClass('spin-the-wheel')
     game.checkForNewRound()
   },
 
   resetGreenTiles() {
     let allBoardTilesArr = $('.puzzle-grid-square')
-
     $('.guessed-letter-list').text(' ')
-
     allBoardTilesArr.map(tile => {
       $(allBoardTilesArr[tile]).text(' ')
       $(allBoardTilesArr[tile]).removeClass('white-tile')
@@ -68,19 +64,14 @@ const domUpdates = {
     })
   },
 
-  toggleGuessAndNextPlayerButtons() {
-    $('.guess-letter-input').addClass('display-mode-none')
-    $('.next-player-btn').removeClass('display-mode-none')
-    $('.guess-letter-btn').addClass('display-mode-none')
-  },
-
   changePlayer() {
-    $('.hidden-guess-section').removeClass('spin-the-wheel')
-    $('.hidden-guess-section').addClass('display-mode-none')
     $('.purchase-vowel-pop-up').removeClass('spin-the-wheel')
     $('.purchase-vowel-pop-up').addClass('display-mode-none')
-    $('.next-player-turn-pop-up').removeClass('display-mode-none')
-    $('.next-player-turn-pop-up').addClass('spin-the-wheel')
+  },
+
+  toggleNextPlayerClass() {
+    $('.next-player-turn-pop-up').toggleClass('display-mode-none')
+    $('.next-player-turn-pop-up').toggleClass('spin-the-wheel')
   },
 
   displaySolveThePuzzle() {
@@ -96,14 +87,19 @@ const domUpdates = {
   },
 
   showPlayerOptions() {
-    $('.next-player-turn-pop-up').addClass('display-mode-none')
     $('.next-player-turn-pop-up').removeClass('spin-the-wheel')
+    $('.next-player-turn-pop-up').addClass('display-mode-none')
+    $('.hidden-guess-section').removeClass('spin-the-wheel')
+    $('.hidden-guess-section').addClass('display-mode-none')
+    console.log($('.hidden-guess-section'))
   },
 
   updatedPlayerIndication(index) {
     let playerScoreContainers = $(`.player-score-container`)
     playerScoreContainers.map(container => {
+      console.log(container)
       $(playerScoreContainers[container]).removeClass('background-change')
+      $(playerScoreContainers[container]).addClass(`player${container + 1}-background`)
     })
     $(`.player${index}-name-game-display`).addClass('pulsate')
     $(`.player${index}-score-container`).addClass('pulsate')
@@ -112,7 +108,12 @@ const domUpdates = {
     $(`.player${index - 1}-score-container`).addClass(`player${index - 1}-background`)
   },
 
-  removeClassGuessSection() {
+  displayGuessSection() {
+    $('.hidden-guess-section').removeClass('display-mode-none')
+    $('.hidden-guess-section').addClass('spin-the-wheel')
+  },
+
+  removeGuessSection() {
     $('.hidden-guess-section').removeClass('spin-the-wheel')
     $('.hidden-guess-section').addClass('display-mode-none')
   },
@@ -120,16 +121,12 @@ const domUpdates = {
   addClassPlayerThree(index) {
     $(`.player${index}-score-container`).addClass(`player${index}-background`)
   },
-  
-  toggleSubmitBtn() {
-    $('.guess-letter-btn').addClass('display-mode-none')
-    $('.next-player-btn').removeClass('display-mode-none')
-  },
 
-  displaySolvedThePuzzle() {
+  displaySolvedThePuzzle(name) {
     $('.solved-the-puzzle').toggleClass('display-mode-none')
     $('.solved-the-puzzle').toggleClass('spin-the-wheel')
     $('.solve-puzzle-input').val('')
+    $('.solved-the-puzzle-text').text('Congratulations ' + name + '! You solved the puzzle!')
   },
 
   displayIncorrectSolve() {
@@ -149,6 +146,12 @@ const domUpdates = {
     $('.wheel-prize-display').text(`$${wheelPrize}`)
   },
 
+  displayBankruptMessage(string) {
+    $('.bankrupt-lose-a-turn').toggleClass('display-mode-none')
+    $('.bankrupt-lose-a-turn').toggleClass('spin-the-wheel')
+    $('.bankrupt-lose-a-turn-text').text(string)
+  },
+
   purchaseVowelDisplayChange() {
     $('.purchase-vowel-pop-up').removeClass('display-mode-none')
     $('.purchase-vowel-pop-up').addClass('spin-the-wheel')
@@ -162,6 +165,11 @@ const domUpdates = {
 
   guessedVowelIsNotAVowelMessage() {
     $('.not-a-vowel-message').removeClass('display-mode-none')      
+  },
+
+  displayGameWinner(player) {
+    $('.game-winner-display').addClass('spin-the-wheel')
+    $('.game-winner-name').text('Congratulations ' + player + ' you won the game!')
   },
 
   checkIfGuessedLetterIsVowel() {
