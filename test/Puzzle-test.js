@@ -8,7 +8,7 @@ describe('Puzzle', () => {
     puzzle = new Puzzle();
   })
 
-  it.skip('should compare solve attempt input to correct answer', () => {
+  it('should compare solve attempt input to correct answer', () => {
     puzzle.currentPuzzle = {  
           category: 'The 90s',
           number_of_words: 1,

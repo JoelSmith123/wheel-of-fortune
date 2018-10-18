@@ -3,7 +3,7 @@ const Game = require('../lib/Game')
 const Round = require('../lib/Round')
 const Data = require('../lib/data')
 
-describe.only('Game', () => {
+describe('Game', () => {
   var game
   beforeEach( () => {
     game = new Game();
