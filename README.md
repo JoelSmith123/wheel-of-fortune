@@ -4,9 +4,10 @@ Wheel of Fortune is a game that accepts 3 players and rewards players for guessi
 Rewards are selected with a wheelspin, and the puzzle is displayed with each word as a blank. As each letter is guessed 
 correctly, its location is filled in on the board. When all the letters are guessed, a new round begins with a new puzzle.
 
+## In-Game Screenshot
+![in-game screenshot](/images/wheel-of-fortune-screenshot.png)
 
 [A link to our DTR gist](https://gist.github.com/kayleenovak/958a9a0321e624c0f27402baea4e50a1)
-
 
 ## Wireframes
 
