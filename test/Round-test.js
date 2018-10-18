@@ -1,7 +1,7 @@
 const { expect } = require('Chai')
 const Round = require('../lib/Round')
 const puzzle = require('../lib/Puzzle')
-const data = require('../lib/Data.js')
+const Data = require('../lib/Data.js')
 global.domUpdates = require('../lib/Data.js');
 
 describe('Round', () => {
@@ -12,7 +12,7 @@ describe('Round', () => {
 
   it('should fetch a random puzzle from our dataset', () => {
     round.getNewPuzzle()
-    expect(round.getNewPuzzle()).to.not.be.undefined;
+    expect(round.getNewPuzzle()).to.not.equal(undefined);
   })
 
   it('should push letters guessed that are not duplicates into an array', () => {
